@@ -17,8 +17,12 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/select2/select2.min.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/select2/select2-bootstrap-5-theme.min.css" />
     <!-- Scripts -->
+    <script src="<?= base_url() ?>assets/jquery.js"></script>
     <script src="<?= base_url() ?>assets/select2/jquery.slim.min.js"></script>
     <script src="<?= base_url() ?>assets/select2/select2.min.js"></script>
+
+    <link href="<?= base_url(); ?>assets/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
 </head>
 
 <body class="sb-nav-fixed">
