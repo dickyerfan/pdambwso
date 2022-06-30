@@ -14,14 +14,18 @@
 
 </head>
 
-<body style="background-color: lightblue ;">
-    <div class="container">
-        <div class="row justify-content-center p-5">
-            <div class="col-md-5">
+<body style="background-color:#E8FBFC ;">
+    <div class="container py-5">
+        <div class="row bg-white justify-content-center p-5 shadow rounded">
+            <div class="col-md-6 ">
+                <h2 class="display-1 fs-2 text-primary text-center">Selamat Datang <br> di Aplikasi Online <br> PDAM Bondowoso</h2>
+                <img src="<?= base_url('assets/img/air2.jpg') ?>" class="img-fluid">
+            </div>
+            <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-body text-center">
                         <img src="<?= base_url('assets/img/pdam_biru.png') ?>" class="card-img-top mt-2" alt="" style="width:25% ;">
-                        <h1 class="h2 text-primary mt-4 font-weight-bold">Silakan <?= strtoupper($title); ?></h1>
+                        <h2 class="text-primary mt-4 display-6">Silakan <?= strtoupper($title); ?></h2>
                         <?= $this->session->flashdata('info'); ?>
                         <?= $this->session->unset_userdata('info'); ?>
                     </div>
@@ -40,7 +44,7 @@
                             </div>
                         </form>
                         <hr>
-                        <div class="text-center small">
+                        <div class="text-center small mb-3">
                             Belum punya akun!, <a href="<?= base_url('auth/registrasi') ?>" style="text-decoration:none;">Silakan Register</a>
                         </div>
                     </div>

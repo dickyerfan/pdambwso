@@ -55,6 +55,14 @@ class Karyawan_semua extends CI_Controller
             $this->load->view('templates/footer');
         } else {
             $data['karyawan'] = $this->model_karyawan->tambahData();
+            $this->session->set_flashdata(
+                'info',
+                '<div class="alert alert-primary alert-dismissible fade show" role="alert" style="width:50%;">
+                        <strong>Sukses,</strong> Data berhasil di tambah
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                      </div>'
+            );
             redirect('karyawan/karyawan_semua');
         }
     }
@@ -81,8 +89,7 @@ class Karyawan_semua extends CI_Controller
                 'info',
                 '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
                         <strong>Maaf,</strong> tidak ada perubahan data
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                       </div>'
             );
@@ -92,8 +99,7 @@ class Karyawan_semua extends CI_Controller
                 'info',
                 '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
                         <strong>Sukses,</strong> Data berhasil di update
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                       </div>'
             );
@@ -104,6 +110,14 @@ class Karyawan_semua extends CI_Controller
     public function hapus($id)
     {
         $this->model_karyawan->hapusData($id);
+        $this->session->set_flashdata(
+            'info',
+            '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+                    <strong>Sukses,</strong> Data berhasil di hapus
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    </button>
+                  </div>'
+        );
         redirect('karyawan/karyawan_semua');
     }
 }

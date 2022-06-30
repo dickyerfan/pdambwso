@@ -14,15 +14,19 @@
 
 </head>
 
-<body style="background-color: lightblue ;">
+<body style="background-color: #E8FBFC;">
 
-    <div class="container">
-        <div class="row justify-content-center p-5">
-            <div class="col-md-5">
+    <div class="container py-2">
+        <div class="row bg-white justify-content-center p-5 shadow rounded">
+            <div class="col-md-6 ">
+                <h2 class="display-5 fs-1 text-primary text-center">Belum Punya Akun <br> Silakan Registrasi</h2>
+                <img src="<?= base_url('assets/img/air.jpg') ?>" class="img-fluid">
+            </div>
+            <div class="col-md-6">
                 <div class="card shadow">
                     <div class="card-body text-center">
                         <img src="<?= base_url('assets/img/pdam_biru.png') ?>" alt="" style="width:25% ;">
-                        <h1 class="h2 text-primary mt-4 font-weight-bold">Silakan <?= strtoupper($title); ?></h1>
+                        <h1 class="display-6 text-primary mt-4">Silakan <?= strtoupper($title); ?></h1>
 
                         <?= $this->session->flashdata('info'); ?>
                         <?= $this->session->unset_userdata('info'); ?>

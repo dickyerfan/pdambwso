@@ -15,7 +15,7 @@ class User extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Daftar User";
+        $data['title'] = "Daftar Pengguna";
         $data['user'] = $this->model_user->getAllUser();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
@@ -24,28 +24,54 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function tambah()
+    public function edit($id)
     {
-        $data['title'] = "Tambah User";
-        $this->form_validation->set_rules('nama_pengguna', 'Nama Pengguna', 'required|trim|min_length[5]|is_unique[user.nama_pengguna]');
-        $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required|trim');
-        $this->form_validation->set_rules('email', 'email', 'required|trim|valid_email');
-        $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[5]');
+        $data['title'] = "Form Edit User";
+        $data['user'] = $this->db->get_where('user', ['id' => $id])->row();
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/navbar');
+        $this->load->view('templates/sidebar');
+        $this->load->view('user/view_userEdit', $data);
+        $this->load->view('templates/footer');
+    }
 
-        $this->form_validation->set_message('required', '%s masih kosong');
-        $this->form_validation->set_message('valid_email', '%s Harus Valid');
-        $this->form_validation->set_message('is_unique', '%s Sudah terdaftar, Ganti yang lain');
-        $this->form_validation->set_message('min_length', '%s Minimal 5 karakter');
-
-        if ($this->form_validation->run() == false) {
-            $this->load->view('templates/header', $data);
-            $this->load->view('templates/navbar');
-            $this->load->view('templates/sidebar');
-            $this->load->view('user/view_userTambah', $data);
-            $this->load->view('templates/footer');
+    public function update()
+    {
+        $this->model_user->updateData();
+        if ($this->db->affected_rows() <= 0) {
+            $this->session->set_flashdata(
+                'info',
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+                        <strong>Maaf,</strong> tidak ada perubahan data
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                      </div>'
+            );
+            redirect('dashboard');
         } else {
-            $data['user'] = $this->model_user->tambahData();
+            $this->session->set_flashdata(
+                'info',
+                '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+                        <strong>Sukses,</strong> Data berhasil di update
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                      </div>'
+            );
             redirect('user/user');
         }
+    }
+
+    public function hapus($id)
+    {
+        $this->model_user->hapusData($id);
+        $this->session->set_flashdata(
+            'info',
+            '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+                    <strong>Sukses,</strong> Data berhasil di hapus
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    </button>
+                  </div>'
+        );
+        redirect('user/user');
     }
 }

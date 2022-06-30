@@ -57,8 +57,7 @@ class Kendaraan_semua extends CI_Controller
                 'info',
                 '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
                         <strong>Sukses,</strong> Data berhasil ditambah
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                       </div>'
             );
@@ -89,8 +88,7 @@ class Kendaraan_semua extends CI_Controller
                 'info',
                 '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
                         <strong>Maaf,</strong> tidak ada perubahan data
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                       </div>'
             );
@@ -100,7 +98,7 @@ class Kendaraan_semua extends CI_Controller
                 'info',
                 '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
                     <strong>Sukses,</strong> Data berhasil di update
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>'
@@ -116,7 +114,7 @@ class Kendaraan_semua extends CI_Controller
             'info',
             '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
                     <strong>Sukses,</strong> Data berhasil di hapus
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>'

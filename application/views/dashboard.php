@@ -9,7 +9,7 @@
 				</div>
 				<div class="card-body text-center">
 					<div class="row justify-content-center">
-						<div class="col-md-3">
+						<div class="col-md-2">
 							<div class="card bg-primary text-light mb-4 text-light mb-4 shadow" style="width: 12rem;">
 								<div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#direktur">DIREKTUR</div>
 							</div>

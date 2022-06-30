@@ -15,7 +15,7 @@ class Admin extends CI_Controller
 
     public function index()
     {
-        $data['title'] = "Daftar Admin";
+        $data['title'] = "Daftar User";
         $data['user'] = $this->model_user->getAll();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
@@ -61,7 +61,6 @@ class Admin extends CI_Controller
     public function edit($id)
     {
         $data['title'] = "Form Edit User";
-        $data['judul'] = "Form Edit User";
         $data['user'] = $this->db->get_where('user', ['id' => $id])->row();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');

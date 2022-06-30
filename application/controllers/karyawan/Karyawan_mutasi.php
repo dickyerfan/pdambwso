@@ -26,7 +26,7 @@ class Karyawan_mutasi extends CI_Controller
 
     public function edit($id)
     {
-        $data['title'] = 'Form Edit Karyawan';
+        $data['title'] = 'Form Mutasi Karyawan';
         $data['karyawan'] = $this->model_karyawan->getIdKaryawan($id);
         $data['bagian'] = $this->db->get('bagian')->result();
         $data['subag'] = $this->db->get('subag')->result();
@@ -46,8 +46,7 @@ class Karyawan_mutasi extends CI_Controller
                 'info',
                 '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
                         <strong>Maaf,</strong> tidak ada perubahan data
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                       </div>'
             );
@@ -57,8 +56,7 @@ class Karyawan_mutasi extends CI_Controller
                 'info',
                 '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
                         <strong>Sukses,</strong> Data berhasil di update
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
                       </div>'
             );
