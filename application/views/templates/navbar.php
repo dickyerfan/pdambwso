@@ -16,8 +16,8 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle fw-bold" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?= $this->session->userdata('nama_lengkap'); ?></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!"><i class="fa-solid fa-unlock-keyhole fa-fw"></i> Ganti Password</a></li>
-                <li><a class="dropdown-item" href="#!"><i class="fa-solid fa-id-card fa-fw"></i> Profil</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('password') ?>"><i class="fa-solid fa-unlock-keyhole fa-fw"></i> Ganti Password</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('password/profil') ?>"><i class="fa-solid fa-id-card fa-fw"></i> Profil</a></li>
                 <li>
                     <hr class="dropdown-divider" />
                 </li>

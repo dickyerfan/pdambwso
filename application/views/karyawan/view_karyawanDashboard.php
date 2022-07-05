@@ -7,7 +7,7 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card bg-danger shadow">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -18,13 +18,13 @@
                                             <a href="<?= base_url('karyawan/karyawan_tetap') ?>" class="text-decoration-none text-light fst-italic"><small>Detail</small></a>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card bg-success shadow">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -35,13 +35,13 @@
                                             <a href="<?= base_url('karyawan/karyawan_kontrak') ?>" class="text-decoration-none text-light fst-italic"><small>Detail</small></a>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-user-md fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card bg-warning shadow">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -58,9 +58,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card bg-secondary shadow">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <a href="<?= base_url('karyawan/karyawan_purna') ?>" class="text-decoration-none fw-bold text-dark text-uppercase">
+                                                Daftar Karyawan Purna</a>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $karpurna; ?></div>
+                                            <a href="<?= base_url('karyawan/karyawan_purna') ?>" class="text-decoration-none text-light fst-italic"><small>Detail</small></a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user-md fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-4 col-md-6 mb-4">
+                        <div class="col-xl-12 col-md-6 mb-4">
                             <div class="card bg-primary shadow">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
@@ -71,7 +88,7 @@
                                             <a href="<?= base_url('karyawan/karyawan_semua') ?>" class="text-decoration-none text-light fst-italic"><small>Detail</small></a>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>

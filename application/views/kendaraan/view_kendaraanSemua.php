@@ -12,11 +12,11 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="dataTable" class="table table-hover table-striped table-bordered table-sm" width="100%" cellspacing="0">
+                        <table id="example" class="table table-hover table-striped table-bordered table-sm" width="100%" cellspacing="0">
                             <thead>
                                 <tr class="bg-secondary text-center">
                                     <th>No</th>
-                                    <th>Action</th>
+                                    <th>Action/action</th>
                                     <th>Merk</th>
                                     <th>Type</th>
                                     <th>Pemegang</th>

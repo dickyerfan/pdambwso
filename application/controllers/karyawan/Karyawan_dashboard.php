@@ -28,6 +28,9 @@ class karyawan_dashboard extends CI_Controller
             'status_pegawai' => 'Karyawan Honorer',
             'aktif' => '1',
         ])->num_rows();
+        $data['karpurna'] = $this->db->get_where('karyawan', [
+            'aktif' => '0',
+        ])->num_rows();
 
 
 

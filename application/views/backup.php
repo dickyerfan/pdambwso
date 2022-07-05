@@ -26,7 +26,7 @@
                                     <form action="<?= base_url('backup/restore') ?>" method="post" enctype="multipart/form-data">
                                         <input type="file" name="datafile" title="Pilih File">
                                         <input type="submit" value="Klik untuk restore" class="btn btn-warning">
-                                        <div class="text-danger fst-italic badge">Pilih File dulu sebelum klik restore</div>
+                                        <div class="text-white fst-italic badge">Pilih File dulu sebelum klik restore</div>
                                     </form>
                                 </div>
                             </div>

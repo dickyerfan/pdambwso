@@ -63,4 +63,41 @@ class Karyawan_mutasi extends CI_Controller
             redirect('karyawan/karyawan_mutasi');
         }
     }
+
+    public function purna($id)
+    {
+        $data['title'] = 'Form Purna Karyawan';
+        $data['karyawan'] = $this->model_karyawan->getIdKaryawan($id);
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/navbar');
+        $this->load->view('templates/sidebar');
+        $this->load->view('karyawan/view_purnaKaryawanMutasi', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function purnaUpdate()
+    {
+        $this->model_karyawan->updateDataPurna();
+        if ($this->db->affected_rows() <= 0) {
+            $this->session->set_flashdata(
+                'info',
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+                        <strong>Maaf,</strong> tidak ada perubahan data
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                      </div>'
+            );
+            redirect('karyawan/karyawan_mutasi');
+        } else {
+            $this->session->set_flashdata(
+                'info',
+                '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+                        <strong>Sukses,</strong> Data berhasil di update
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                        </button>
+                      </div>'
+            );
+            redirect('karyawan/karyawan_mutasi');
+        }
+    }
 }

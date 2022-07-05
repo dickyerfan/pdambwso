@@ -29,17 +29,26 @@
 <!-- Sweetalert2 -->
 <script src="<?php echo base_url('assets/'); ?>sweetalert2.all.min.js"></script>
 
-<script src="<?= base_url() ?>/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="<?= base_url() ?>/js/scripts.js"></script>
-<script src="<?= base_url() ?>/js/Chart.min.js" crossorigin="anonymous"></script>
-<script src="<?= base_url() ?>/assets/demo/chart-area-demo.js"></script>
-<script src="<?= base_url() ?>/assets/demo/chart-bar-demo.js"></script>
-<script src="<?= base_url() ?>/js/datatables-simple-demo.js"></script>
+<script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="<?= base_url() ?>assets/js/scripts.js"></script>
+<script src="<?= base_url() ?>assets/js/Chart.min.js" crossorigin="anonymous"></script>
+<script src="<?= base_url() ?>assets/demo/chart-area-demo.js"></script>
+<script src="<?= base_url() ?>assets/demo/chart-bar-demo.js"></script>
+<script src="<?= base_url() ?>assets/js/datatables-simple-demo.js"></script>
 
-<script src="<?= base_url(); ?>assets/datatables/jquery.dataTables.min.js"></script>
-<script src="<?= base_url(); ?>assets/datatables/dataTables.bootstrap4.min.js"></script>
+<!-- datatable bootstrap5 -->
+<script src="<?= base_url(); ?>assets/datatables/bootstrap5/jquery-3.5.1.js"></script>
+<script src="<?= base_url(); ?>assets/datatables/bootstrap5/jquery.dataTables.min.js"></script>
+<script src="<?= base_url(); ?>assets/datatables/bootstrap5/dataTables.bootstrap5.min.js"></script>
+<!-- select2 js -->
+<script src="<?= base_url() ?>assets/select2/select2.min.js"></script>
 
-<script src="<?= base_url(); ?>assets/demo/datatables-demo.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    });
+</script>
 
 <script>
     $('.select2').select2({

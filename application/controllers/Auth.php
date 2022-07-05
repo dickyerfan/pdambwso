@@ -28,6 +28,7 @@ class Auth extends CI_Controller
                         $data_session = [
                             'nama_pengguna' => $cek_nama_pengguna->nama_pengguna,
                             'nama_lengkap' => $cek_nama_pengguna->nama_lengkap,
+                            'email' => $cek_nama_pengguna->email,
                             'password' => $cek_nama_pengguna->password,
                             'level' => $cek_nama_pengguna->level
                         ];
@@ -42,6 +43,7 @@ class Auth extends CI_Controller
                         $data_session = [
                             'nama_pengguna' => $cek_nama_pengguna->nama_pengguna,
                             'nama_lengkap' => $cek_nama_pengguna->nama_lengkap,
+                            'email' => $cek_nama_pengguna->email,
                             'password' => $cek_nama_pengguna->password,
                             'level' => $cek_nama_pengguna->level
                         ];
@@ -98,7 +100,7 @@ class Auth extends CI_Controller
         $this->session->unset_userdata('password');
         $this->session->unset_userdata('level');
 
-        $this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Selamat, Anda Berhasil Logout!</div>');
+        $this->session->set_flashdata('info', '<div class="alert alert-success" role="alert">Selamat, Anda Berhasil Logout!</div>');
         redirect('auth');
     }
 }

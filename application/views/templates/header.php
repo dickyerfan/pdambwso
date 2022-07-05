@@ -9,19 +9,16 @@
     <meta name="author" content="" />
     <title>PDAM | <?= $title ?></title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="<?= base_url() ?>/css/styles.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- select2 bootstrap5 -->
     <!-- Styles -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/select2/bootstrap.min.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/select2/select2.min.css" />
     <link rel="stylesheet" href="<?= base_url() ?>assets/select2/select2-bootstrap-5-theme.min.css" />
-    <!-- Scripts -->
-    <script src="<?= base_url() ?>assets/jquery.js"></script>
-    <script src="<?= base_url() ?>assets/select2/jquery.slim.min.js"></script>
-    <script src="<?= base_url() ?>assets/select2/select2.min.js"></script>
 
-    <link href="<?= base_url(); ?>assets/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>assets/datatables/bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>assets/datatables/bootstrap5/dataTables.bootstrap5.min.css" rel="stylesheet">
 
 </head>
 

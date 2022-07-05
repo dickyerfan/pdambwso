@@ -32,7 +32,7 @@ class Kendaraan_orang extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
         $this->load->view('templates/sidebar');
-        $this->load->view('karyawan/view_editKendaraanOrang', $data);
+        $this->load->view('kendaraan/view_editKendaraanOrang', $data);
         $this->load->view('templates/footer');
     }
 

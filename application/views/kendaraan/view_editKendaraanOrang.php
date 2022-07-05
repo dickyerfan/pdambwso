@@ -13,7 +13,7 @@
                                 <input type="hidden" name="id_kendaraan" id="id_kendaraan" value="<?= $kendaraan->id_kendaraan; ?>">
                                 <div class="form-group">
                                     <label for="nama">Pilih Nama Pemakai baru :</label>
-                                    <select name="id_karyawan" id="nama" class="form-control">
+                                    <select name="id_karyawan" id="nama" class="form-control select2">
                                         <?php foreach ($karyawan as $row) : ?>
                                             <option value="<?= $row->id ?>" <?= $kendaraan->id_karyawan == $row->id ? 'selected' : '' ?>><?= $row->nama ?></option>
                                         <?php endforeach; ?>

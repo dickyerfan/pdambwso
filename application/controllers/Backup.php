@@ -64,7 +64,15 @@ class Backup extends CI_Controller
         }
         unlink($direktori);
 
-        echo "<script>alert('Restore Sukses')</script>";
+        // echo "<script>alert('Restore Sukses')</script>";
+        $this->session->set_flashdata(
+            'info',
+            '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+                    <strong>Sukses,</strong> Data berhasil di restore
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    </button>
+                  </div>'
+        );
         redirect('backup', 'refresh');
     }
 }

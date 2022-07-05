@@ -12,11 +12,11 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="dataTable" class="table table-hover table-striped table-bordered table-sm" width="100%" cellspacing="0">
+                        <table id="example" class="table table-hover table-striped table-bordered table-sm" width="100%" cellspacing="0">
                             <thead>
                                 <tr class="bg-secondary text-center">
                                     <th>No</th>
-                                    <th>Action_action</th>
+                                    <th>Action/action</th>
                                     <th>Nama Lengkap</th>
                                     <th>Nik</th>
                                     <th>Bagian</th>
@@ -43,6 +43,7 @@
                                         <td class="text-center">
                                             <a href="<?= base_url(); ?>karyawan/karyawan_semua/edit/<?= $row->id; ?>" class="btn-sm btn btn-primary"><i class="fas fa-fw fa-edit"></i></a>
                                             <a href="<?= site_url('karyawan/karyawan_semua/hapus/' . $row->id); ?>" class="btn-sm btn btn-danger"><i class="fas fa-fw fa-trash"></i></a>
+                                            <a href="<?= site_url('karyawan/karyawan_semua/detail/' . $row->id); ?>" class="btn-sm btn btn-success"><i class="fa-solid fa-circle-info"></i></a>
                                         </td>
                                         <td><?= $row->nama ?></td>
                                         <td><?= $row->nik ?></td>

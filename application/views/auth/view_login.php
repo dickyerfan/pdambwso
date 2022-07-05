@@ -9,7 +9,7 @@
     <meta name="author" content="" />
     <title>App | <?= $title ?></title>
 
-    <link href="<?= base_url() ?>/css/styles.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
 </head>
@@ -32,11 +32,11 @@
                     <div class="card-footer">
                         <form method="post" action="<?= base_url('auth') ?>">
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nama_pengguna" id="nama_pengguna" placeholder="Masukan nama pengguna" value="<?= set_value('nama_lengkap'); ?>">
+                                <input type="text" class="form-control" name="nama_pengguna" id="nama_pengguna" placeholder="Masukkan nama pengguna" value="<?= set_value('nama_lengkap'); ?>">
                                 <?= form_error('nama_pengguna', '<span class="text-danger small pl-2">', '</span>'); ?>
                             </div>
                             <div class="form-group mt-2">
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Masukkan Password">
                                 <?= form_error('password', '<span class="text-danger small pl-2">', '</span>'); ?>
                             </div>
                             <div class="d-grid mt-3">

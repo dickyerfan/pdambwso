@@ -120,4 +120,18 @@ class Karyawan_semua extends CI_Controller
         );
         redirect('karyawan/karyawan_semua');
     }
+
+    public function detail($id)
+    {
+        $data['title'] = 'Detail Karyawan';
+        $data['karyawan'] = $this->model_karyawan->getdetail($id);
+        // $data['bagian'] = $this->db->get('bagian')->result();
+        // $data['subag'] = $this->db->get('subag')->result();
+        // $data['jabatan'] = $this->db->get('jabatan')->result();
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/navbar');
+        $this->load->view('templates/sidebar');
+        $this->load->view('karyawan/view_detailKaryawanSemua', $data);
+        $this->load->view('templates/footer');
+    }
 }

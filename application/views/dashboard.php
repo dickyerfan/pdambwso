@@ -4,7 +4,7 @@
 			<?= $this->session->flashdata('info'); ?>
 			<?= $this->session->unset_userdata('info'); ?>
 			<div class="card">
-				<div class="card-header mb-4 shadow">
+				<div class="card-header mb-2 shadow">
 					<div class="fw-bold">Struktur Organisasi PDAM Bondowoso</div>
 				</div>
 				<div class="card-body text-center">
@@ -200,20 +200,21 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Nama</td>
-								<td> : </td>
-								<td><?= $direktur->nama ?></td>
+								<?php $direktur = isset($direktur->nama)  ? $direktur->nama : ''  ?>
+								<td class="fw-bold"><?= strtoupper($direktur)  ?></td>
 							</tr>
-							<tr>
+							<!-- <tr>
 								<td>No HP</td>
 								<td> : </td>
-								<td><?= $direktur->no_hp ?></td>
+								<?php $direkturHp = isset($direktur->no_hp)  ? $direktur->no_hp : ''  ?>
+								<td><?= $direkturHp ?></td>
 							</tr>
 							<tr>
 								<td>Alamat</td>
 								<td> : </td>
-								<td><?= $direktur->alamat ?></td>
-							</tr>
+								<?php $direkturAlamat = isset($direktur->alamat)  ? $direktur->alamat : ''  ?>
+								<td><?= $direkturAlamat ?></td>
+							</tr> -->
 						</tbody>
 					</table>
 				</div>
@@ -470,7 +471,7 @@
 							</tr>
 							<?php foreach ($s_renc as $row) : ?>
 								<tr>
-									<td>Staf Langganan</td>
+									<td>Staf Perencanaan</td>
 									<td> : </td>
 									<?php $s_renc = isset($s_renc->nama)  ? $s_renc->nama : ''  ?>
 									<td><?= $row->nama ?></td>
@@ -484,7 +485,7 @@
 							</tr>
 							<?php foreach ($s_awas as $row) : ?>
 								<tr>
-									<td>Staf Penagihan</td>
+									<td>Staf Pengawasan</td>
 									<td> : </td>
 									<?php $s_awas = isset($s_awas->nama)  ? $s_awas->nama : ''  ?>
 									<td><?= $row->nama ?></td>

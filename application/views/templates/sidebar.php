@@ -20,6 +20,7 @@
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_tetap') ?>">Karyawan Tetap</a>
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_kontrak') ?>">Karyawan Kontrak</a>
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_honorer') ?>">Karyawan Honorer</a>
+                            <a class="nav-link" href="<?= base_url('karyawan/karyawan_purna') ?>">Karyawan Purna</a>
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataPekerjaan" aria-expanded="false" aria-controls="dataPekerjaan">

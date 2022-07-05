@@ -133,17 +133,17 @@
                                     <small class="form-text text-danger pl-3"><?= form_error('jenkel'); ?></small>
                                 </div>
                             </div>
-                            <div class="col-md-4 mb-2">
+                            <!-- <div class="col-md-4 mb-2">
                                 <div class="form-group">
                                     <label for="aktif">Aktif :</label>
                                     <select name="aktif" id="aktif" class="form-control select2">
                                         <option value="">-- Pilih Status Aktif --</option>
-                                        <option value="1" <?= $karyawan->aktif == '1' ? 'selected' : '' ?>>1</option>
-                                        <option value="0" <?= $karyawan->aktif == '0' ? 'selected' : '' ?>>0</option>
+                                        <option value="1" <?= $karyawan->aktif == '1' ? 'selected' : '' ?>>Aktif</option>
+                                        <option value="0" <?= $karyawan->aktif == '0' ? 'selected' : '' ?>>Purna</option>
                                     </select>
                                     <small class="form-text text-danger pl-3"><?= form_error('aktif'); ?></small>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <button class="btn btn-primary btn-sm mt-1" name="tambah" type="submit"><i class="fas fa-edit"></i> Update</button>
                     </form>

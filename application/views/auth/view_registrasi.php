@@ -9,7 +9,7 @@
     <meta name="author" content="" />
     <title>App | <?= $title ?></title>
 
-    <link href="<?= base_url() ?>/css/styles.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>assets/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
 </head>
@@ -26,7 +26,7 @@
                 <div class="card shadow">
                     <div class="card-body text-center">
                         <img src="<?= base_url('assets/img/pdam_biru.png') ?>" alt="" style="width:25% ;">
-                        <h1 class="display-6 text-primary mt-4">Silakan <?= strtoupper($title); ?></h1>
+                        <h1 class="display-6 text-primary mt-4">FORM <?= strtoupper($title); ?></h1>
 
                         <?= $this->session->flashdata('info'); ?>
                         <?= $this->session->unset_userdata('info'); ?>

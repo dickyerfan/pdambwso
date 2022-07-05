@@ -13,6 +13,16 @@ class Model_karyawan extends CI_Model
         // $this->db->where('aktif', '1');
         return $this->db->get()->result();
     }
+    public function getdetail($id)
+    {
+        $this->db->select('*, bagian.nama_bagian,subag.nama_subag, jabatan.nama_jabatan');
+        $this->db->from('karyawan');
+        $this->db->join('bagian', 'bagian.id_bagian = karyawan.id_bagian');
+        $this->db->join('subag', 'subag.id_subag = karyawan.id_subag');
+        $this->db->join('jabatan', 'jabatan.id_jabatan = karyawan.id_jabatan');
+        $this->db->where('id', $id);
+        return $this->db->get()->row();
+    }
 
     public function tambahData()
     {
@@ -55,7 +65,7 @@ class Model_karyawan extends CI_Model
             // 'id_bagian' => $this->input->post('id_bagian', true),
             // 'id_subag' => $this->input->post('id_subag', true),
             // 'id_jabatan' => $this->input->post('id_jabatan', true),
-            'aktif' => $this->input->post('aktif', true)
+            // 'aktif' => $this->input->post('aktif', true)
         ];
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('karyawan', $data);
@@ -71,6 +81,14 @@ class Model_karyawan extends CI_Model
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('karyawan', $data);
     }
+    public function updateDataPurna()
+    {
+        $data = [
+            'aktif' => $this->input->post('aktif', true),
+        ];
+        $this->db->where('id', $this->input->post('id'));
+        $this->db->update('karyawan', $data);
+    }
 
     public function hapusData($id)
     {
@@ -80,14 +98,27 @@ class Model_karyawan extends CI_Model
 
     public function getKaryawanTetap()
     {
-        return $this->db->get_where('karyawan', ['status_pegawai' => 'Karyawan Tetap'])->result();
+        return $this->db->get_where('karyawan', [
+            'status_pegawai' => 'Karyawan Tetap',
+            'aktif' => '1'
+        ])->result();
     }
     public function getKaryawanKontrak()
     {
-        return $this->db->get_where('karyawan', ['status_pegawai' => 'Karyawan Kontrak'])->result();
+        return $this->db->get_where('karyawan', [
+            'status_pegawai' => 'Karyawan Kontrak',
+            'aktif' => '1'
+        ])->result();
     }
     public function getKaryawanHonorer()
     {
-        return $this->db->get_where('karyawan', ['status_pegawai' => 'Karyawan Honorer'])->result();
+        return $this->db->get_where('karyawan', [
+            'status_pegawai' => 'Karyawan Honorer',
+            'aktif' => '1'
+        ])->result();
+    }
+    public function getKaryawanPurna()
+    {
+        return $this->db->get_where('karyawan', ['aktif' => '0'])->result();
     }
 }
