@@ -19,7 +19,11 @@
 
     <link href="<?= base_url(); ?>assets/datatables/bootstrap5/bootstrap.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/datatables/bootstrap5/dataTables.bootstrap5.min.css" rel="stylesheet">
-
+    <style>
+        .font {
+            font-size: 0.7rem;
+        }
+    </style>
 </head>
 
 <body class="sb-nav-fixed">

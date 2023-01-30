@@ -32,7 +32,7 @@
 <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="<?= base_url() ?>assets/js/scripts.js"></script>
 <script src="<?= base_url() ?>assets/js/Chart.min.js" crossorigin="anonymous"></script>
-<script src="<?= base_url() ?>assets/demo/chart-area-demo.js"></script>
+<!-- <script src="<?= base_url() ?>assets/demo/chart-area-demo.js"></script> -->
 <script src="<?= base_url() ?>assets/demo/chart-bar-demo.js"></script>
 <script src="<?= base_url() ?>assets/js/datatables-simple-demo.js"></script>
 
@@ -75,6 +75,333 @@
         })
     })
 </script>
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#292b2c';
+
+    // Area Chart Example
+    var ctx = document.getElementById("allRupiah");
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"],
+            datasets: [{
+                label: "Rupiah",
+                lineTension: 0.3,
+                backgroundColor: "rgba(2,117,216,0.2)",
+                borderColor: "rgba(2,117,216,1)",
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(2,117,216,1)",
+                pointBorderColor: "rgba(255,255,255,0.8)",
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                pointHitRadius: 50,
+                pointBorderWidth: 2,
+                data: [
+                    <?= $totalJan ?>,
+                    <?= $totalFeb ?>,
+                    <?= $totalMar ?>,
+                    <?= $totalApr ?>,
+                    <?= $totalMei ?>,
+                    <?= $totalJun ?>,
+                    <?= $totalJul ?>,
+                    <?= $totalAgs ?>,
+                    <?= $totalSep ?>,
+                    <?= $totalOkt ?>,
+                    <?= $totalNov ?>,
+                    <?= $totalDes ?>
+                ],
+            }],
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'date'
+                    },
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 15
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        min: 1200000000,
+                        max: 1450000000,
+                        maxTicksLimit: 10
+                    },
+                    gridLines: {
+                        color: "rgba(0, 0, 0, .125)",
+                    }
+                }],
+            },
+            legend: {
+                display: true
+            }
+        }
+    });
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#292b2c';
+
+    // Area Chart Example
+    var ctx = document.getElementById("allPakai");
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"],
+            datasets: [{
+                label: "Air Pakai",
+                lineTension: 0.3,
+                backgroundColor: "rgba(2,117,216,0.2)",
+                borderColor: "rgba(2,117,216,1)",
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(2,117,216,1)",
+                pointBorderColor: "rgba(255,255,255,0.8)",
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                pointHitRadius: 50,
+                pointBorderWidth: 2,
+                data: [
+                    <?= $totalJan ?>,
+                    <?= $totalFeb ?>,
+                    <?= $totalMar ?>,
+                    <?= $totalApr ?>,
+                    <?= $totalMei ?>,
+                    <?= $totalJun ?>,
+                    <?= $totalJul ?>,
+                    <?= $totalAgs ?>,
+                    <?= $totalSep ?>,
+                    <?= $totalOkt ?>,
+                    <?= $totalNov ?>,
+                    <?= $totalDes ?>
+                ],
+            }],
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'date'
+                    },
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 15
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        min: 220000,
+                        max: 270000,
+                        maxTicksLimit: 10
+                    },
+                    gridLines: {
+                        color: "rgba(0, 0, 0, .125)",
+                    }
+                }],
+            },
+            legend: {
+                display: true
+            }
+        }
+    });
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#292b2c';
+
+    // Area Chart Example
+    var ctx = document.getElementById("allRek");
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"],
+            datasets: [{
+                label: "Jumlah Rekening",
+                lineTension: 0.3,
+                backgroundColor: "rgba(2,117,216,0.2)",
+                borderColor: "rgba(2,117,216,1)",
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(2,117,216,1)",
+                pointBorderColor: "rgba(255,255,255,0.8)",
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                pointHitRadius: 50,
+                pointBorderWidth: 2,
+                data: [
+                    <?= $totalJan ?>,
+                    <?= $totalFeb ?>,
+                    <?= $totalMar ?>,
+                    <?= $totalApr ?>,
+                    <?= $totalMei ?>,
+                    <?= $totalJun ?>,
+                    <?= $totalJul ?>,
+                    <?= $totalAgs ?>,
+                    <?= $totalSep ?>,
+                    <?= $totalOkt ?>,
+                    <?= $totalNov ?>,
+                    <?= $totalDes ?>
+                ],
+            }],
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'date'
+                    },
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 15
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        min: 19000,
+                        max: 20000,
+                        maxTicksLimit: 10
+                    },
+                    gridLines: {
+                        color: "rgba(0, 0, 0, .125)",
+                    }
+                }],
+            },
+            legend: {
+                display: true
+            }
+        }
+    });
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#292b2c';
+
+    // Area Chart Example
+    var ctx = document.getElementById("bwsRupiah");
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"],
+            datasets: [{
+                label: "Rupiah",
+                lineTension: 0.3,
+                backgroundColor: "rgba(2,117,216,0.2)",
+                borderColor: "rgba(2,117,216,1)",
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(2,117,216,1)",
+                pointBorderColor: "rgba(255,255,255,0.8)",
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                pointHitRadius: 50,
+                pointBorderWidth: 2,
+                data: [
+                    // 466540360, 458690100, 430323160
+                    <?= $bonJan ?>,
+                    <?= $bonFeb ?>,
+                    <?= $bonMar ?>,
+                ],
+            }],
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'date'
+                    },
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 15
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        min: 400000000,
+                        max: 500000000,
+                        maxTicksLimit: 1000
+                    },
+                    gridLines: {
+                        color: "rgba(0, 0, 0, .125)",
+                    }
+                }],
+            },
+            legend: {
+                display: true
+            }
+        }
+    });
+</script>
+<!-- <script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    // Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    // Chart.defaults.global.defaultFontColor = '#292b2c';
+
+    // Area Chart Example
+    var ctx = document.getElementById("suko1");
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Ags", "Sep", "Okt", "Nov", "Des"],
+            datasets: [{
+                label: "Rupiah",
+                lineTension: 0.3,
+                backgroundColor: "rgba(2,117,216,0.2)",
+                borderColor: "rgba(2,117,216,1)",
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(2,117,216,1)",
+                pointBorderColor: "rgba(255,255,255,0.8)",
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(2,117,216,1)",
+                pointHitRadius: 50,
+                pointBorderWidth: 2,
+                data: [
+                    82427940, 82701060, 80307670
+                ],
+            }],
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'date'
+                    },
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 15
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        min: 75000000,
+                        max: 85000000,
+                        maxTicksLimit: 1000
+                    },
+                    gridLines: {
+                        color: "rgba(0, 0, 0, .125)",
+                    }
+                }],
+            },
+            legend: {
+                display: true
+            }
+        }
+    });
+</script> -->
 
 </body>
 

@@ -4,11 +4,11 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <a class="nav-link" href="<?= base_url('dashboard') ?>">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt fa-fw"></i></div>
                         Dashboard
                     </a>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataKaryawan" aria-expanded="false" aria-controls="dataKaryawan">
-                        <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-users fa-fw"></i></div>
                         Data Karyawan
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
@@ -24,7 +24,7 @@
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataPekerjaan" aria-expanded="false" aria-controls="dataPekerjaan">
-                        <div class="sb-nav-link-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-briefcase fa-fw"></i></div>
                         Data Pekerjaan
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
@@ -37,7 +37,7 @@
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataKendaraan" aria-expanded="false" aria-controls="dataKendaraan">
-                        <div class="sb-nav-link-icon"><i class="fas fa-car"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-car fa-fw"></i></div>
                         Data Kendaraan
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
@@ -49,8 +49,22 @@
                             <a class="nav-link" href="<?= base_url('kendaraan/type') ?>">Daftar Type</a>
                         </nav>
                     </div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#datarekening" aria-expanded="false" aria-controls="datarekening">
+                        <div class="sb-nav-link-icon"><i class="fas fa-file-invoice fa-fw"></i></div>
+                        Data Rekening
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="datarekening" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="<?= base_url('rekening/input_data') ?>">Input Data</a>
+                            <a class="nav-link" href="<?= base_url('rekening/nama_upk') ?>">Daftar UPK</a>
+                            <a class="nav-link" href="<?= base_url('rekening/rekening_jumlah') ?>">Jumlah Rekening</a>
+                            <a class="nav-link" href="<?= base_url('rekening/rekening_pakai') ?>">Air Terpakai</a>
+                            <a class="nav-link" href="<?= base_url('rekening/rekening_rupiah') ?>">Pendapatan</a>
+                        </nav>
+                    </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataUser" aria-expanded="false" aria-controls="dataUser">
-                        <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-user fa-fw"></i></div>
                         Data User
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
@@ -61,11 +75,11 @@
                         </nav>
                     </div>
                     <a class="nav-link" href="<?= base_url('backup') ?>">
-                        <div class="sb-nav-link-icon"><i class="fas fa-database"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-database fa-fw"></i></div>
                         Backup & Restore
                     </a>
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                        <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
+                        <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt fa-fw"></i></div>
                         Logout
                     </a>
                     <!-- <div class="sb-sidenav-menu-heading">Addons</div> -->

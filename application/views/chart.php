@@ -19,8 +19,6 @@
                 <canvas id="barChart" width="400"></canvas>
             </div>
         </div>
-
-
     </div>
 
 </section>

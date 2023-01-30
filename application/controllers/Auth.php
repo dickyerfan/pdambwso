@@ -60,7 +60,7 @@ class Auth extends CI_Controller
                     redirect('auth');
                 }
             } else { //jika nama_pengguna salah
-                $this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Login Gagal, nama_pengguna Anda Salah.!</div>');
+                $this->session->set_flashdata('info', '<div class="alert alert-danger" role="alert">Login Gagal, nama pengguna Anda Salah.!</div>');
                 redirect('auth');
             }
             redirect('dashboard');
