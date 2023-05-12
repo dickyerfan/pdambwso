@@ -33,7 +33,7 @@ class Auth extends CI_Controller
                             'level' => $cek_nama_pengguna->level
                         ];
                         $this->session->set_userdata($data_session);
-                        $this->session->set_flashdata('info',         '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+                        $this->session->set_flashdata('info',         '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>Selamat,</strong> Anda Berhasil Login
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
@@ -48,7 +48,7 @@ class Auth extends CI_Controller
                             'level' => $cek_nama_pengguna->level
                         ];
                         $this->session->set_userdata($data_session);
-                        $this->session->set_flashdata('info', '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+                        $this->session->set_flashdata('info', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>Selamat,</strong> Anda Berhasil Login
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>

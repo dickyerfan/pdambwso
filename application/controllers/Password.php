@@ -25,11 +25,19 @@ class Password extends CI_Controller
 		$this->form_validation->set_message('matches', '%s harus sama dengan password baru');
 
 		if ($this->form_validation->run() == false) {
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/navbar');
-			$this->load->view('templates/sidebar');
-			$this->load->view('view_gantiPassword', $data);
-			$this->load->view('templates/footer');
+			if ($this->session->userdata('level') == 'Admin') {
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/navbar');
+				$this->load->view('templates/sidebar');
+				$this->load->view('view_gantiPassword', $data);
+				$this->load->view('templates/footer');
+			} else {
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/navbar');
+				$this->load->view('templates/sidebar_pengguna');
+				$this->load->view('view_gantiPassword', $data);
+				$this->load->view('templates/footer');
+			}
 		} else {
 			$cek_pass = $this->db->get_where('user', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row();
 			$passwordLama = $this->input->post('passLama');
@@ -79,10 +87,18 @@ class Password extends CI_Controller
 	public function profil()
 	{
 		$data['title'] = "Profil";
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/navbar');
-		$this->load->view('templates/sidebar');
-		$this->load->view('view_profil', $data);
-		$this->load->view('templates/footer');
+		if ($this->session->userdata('level') == 'Admin') {
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/navbar');
+			$this->load->view('templates/sidebar');
+			$this->load->view('view_profil', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/navbar');
+			$this->load->view('templates/sidebar_pengguna');
+			$this->load->view('view_profil', $data);
+			$this->load->view('templates/footer');
+		}
 	}
 }

@@ -16,7 +16,7 @@
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus officiis maiores dolorum minima. Aliquam nostrum culpa vel, et architecto soluta, ipsum delectus incidunt a exercitationem ipsam beatae inventore! Provident, aut?</p>
                         </div>
                         <div class="card-footer">
-                            <a href="<?= base_url('dashboard'); ?>" class="btn btn-primary">Kembali</a>
+                            <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('dashboard') : base_url('pengguna'); ?>" class="btn btn-primary">Kembali</a>
                         </div>
                     </div>
                 </div>

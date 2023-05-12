@@ -271,7 +271,7 @@ class Pengguna extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
-        // $this->load->view('templates/sidebar');
+        $this->load->view('templates/sidebar_pengguna');
         $this->load->view('pengguna/view_pengguna', $data);
         $this->load->view('templates/footer');
     }

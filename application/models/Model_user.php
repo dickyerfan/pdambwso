@@ -5,7 +5,7 @@ class model_user extends CI_Model
 {
     public function getAll()
     {
-        // $this->db->where('level', 'Admin');
+        $this->db->where('level', 'Admin');
         return $this->db->get('user')->result();
     }
     public function getAllUser()
