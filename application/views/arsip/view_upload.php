@@ -21,6 +21,7 @@
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Nama File :</label>
                                             <input type="file" name="nama_file" class="form-control" required>
+                                            <small class="form-text text-danger pl-3"><?= form_error('nama_file'); ?></small>
                                         </div>
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Jenis Dokumen :</label>
@@ -31,29 +32,34 @@
                                                 <option value="Berkas Kerja">Berkas Kerja</option>
                                                 <option value="Dokumen">Dokumen</option>
                                             </select>
+                                            <small class="form-text text-danger pl-3"><?= form_error('jenis'); ?></small>
                                         </div>
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Nama Dokumen :</label>
-                                            <input type="text" name="nama_dokumen" class="form-control" required>
+                                            <input type="text" name="nama_dokumen" class="form-control" value="<?= set_value('nama_dokumen'); ?>">
+                                            <small class="form-text text-danger pl-3"><?= form_error('nama_dokumen'); ?></small>
                                         </div>
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Tahun :</label>
-                                            <input type="text" name="tahun" class="form-control" required>
+                                            <input type="text" name="tahun" class="form-control" value="<?= set_value('tahun'); ?>">
+                                            <small class="form-text text-danger pl-3"><?= form_error('tahun'); ?></small>
                                         </div>
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Tanggal Dokumen :</label>
-                                            <input type="date" name="tgl_dokumen" class="form-control" required>
+                                            <input type="date" name="tgl_dokumen" class="form-control" value="<?= set_value('tgl_dokumen'); ?>">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Tanggal Upload :</label>
-                                            <input type="date" name="tgl_upload" class="form-control" required>
+                                            <input type="date" name="tgl_upload" class="form-control" value="<?= set_value('tgl_upload'); ?>">
+                                            <small class="form-text text-danger pl-3"><?= form_error('tgl_upload'); ?></small>
                                         </div>
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Tentang :</label>
                                             <!-- <input type="text" name="tentang" class="form-control" required> -->
-                                            <textarea name="tentang" id="" rows="4" class="form-control"></textarea>
+                                            <textarea name="tentang" id="" rows="4" class="form-control"><?= set_value('tentang'); ?></textarea>
+                                            <small class="form-text text-danger pl-3"><?= form_error('tentang'); ?></small>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="" class="form-label">Keterangan :</label>

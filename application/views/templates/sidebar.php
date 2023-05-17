@@ -9,7 +9,7 @@
                     </a>
                     <a class="nav-link" href="<?= base_url('arsip') ?>">
                         <div class="sb-nav-link-icon"><i class="fas fa-file fa-fw"></i></div>
-                        <div style="font-size: 0.8rem;"> Data Arsip File</div>
+                        <div style="font-size: 0.8rem;"> Data Arsip/Dokumen</div>
                     </a>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataKaryawan" aria-expanded="false" aria-controls="dataKaryawan">
                         <div class="sb-nav-link-icon"><i class="fas fa-users fa-fw"></i></div>
@@ -19,11 +19,11 @@
                     <div class="collapse" id="dataKaryawan" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_dashboard') ?>" style="font-size: 0.8rem;">Dashboard Karyawan</a>
-                            <a class="nav-link" href="<?= base_url('karyawan/karyawan_semua') ?>" style="font-size: 0.8rem;">Semua Karyawan</a>
+                            <!-- <a class="nav-link" href="<?= base_url('karyawan/karyawan_semua') ?>" style="font-size: 0.8rem;">Semua Karyawan</a> -->
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_mutasi') ?>" style="font-size: 0.8rem;">Mutasi Karyawan</a>
-                            <a class="nav-link" href="<?= base_url('karyawan/karyawan_tetap') ?>" style="font-size: 0.8rem;">Karyawan Tetap</a>
+                            <!-- <a class="nav-link" href="<?= base_url('karyawan/karyawan_tetap') ?>" style="font-size: 0.8rem;">Karyawan Tetap</a>
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_kontrak') ?>" style="font-size: 0.8rem;">Karyawan Kontrak</a>
-                            <a class="nav-link" href="<?= base_url('karyawan/karyawan_honorer') ?>" style="font-size: 0.8rem;">Karyawan Honorer</a>
+                            <a class="nav-link" href="<?= base_url('karyawan/karyawan_honorer') ?>" style="font-size: 0.8rem;">Karyawan Honorer</a> -->
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_purna') ?>" style="font-size: 0.8rem;">Karyawan Purna</a>
                         </nav>
                     </div>

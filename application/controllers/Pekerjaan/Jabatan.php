@@ -40,7 +40,7 @@ class Jabatan extends CI_Controller
     } else {
       $this->session->set_flashdata(
         'info',
-        '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+        '<div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong>Sukses,</strong> data Jabatan Berhasil di simpan
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 </button>
@@ -69,7 +69,7 @@ class Jabatan extends CI_Controller
     if ($this->db->affected_rows() <= 0) {
       $this->session->set_flashdata(
         'info',
-        '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+        '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                   <strong>Maaf,</strong> tidak ada perubahan data
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                   </button>
@@ -79,8 +79,8 @@ class Jabatan extends CI_Controller
     } else {
       $this->session->set_flashdata(
         'info',
-        '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
-                <strong>Sukses,</strong> Data berhasil di update
+        '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Sukses,</strong> Data Jabatan berhasil di update
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 </button>
               </div>'
@@ -92,7 +92,7 @@ class Jabatan extends CI_Controller
   public function hapus($id)
   {
     $this->model_pekerjaan->hapusData($id);
-    $this->session->set_flashdata('info', '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+    $this->session->set_flashdata('info', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Sukses,</strong> data Jabatan Berhasil di hapus
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
         </button>

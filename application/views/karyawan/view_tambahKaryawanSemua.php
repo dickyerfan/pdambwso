@@ -4,7 +4,11 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <a href="<?= base_url('karyawan/karyawan_semua'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
+                    <a href="<?= base_url('karyawan/karyawan_dashboard'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
+                </div>
+                <div class="p-2">
+                    <?= $this->session->flashdata('info'); ?>
+                    <?= $this->session->unset_userdata('info'); ?>
                 </div>
                 <div class="card-body">
                     <form class="user" action="" method="POST">

@@ -40,7 +40,7 @@ class Merk extends CI_Controller
     } else {
       $this->session->set_flashdata(
         'info',
-        '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+        '<div class="alert alert-success alert-dismissible fade show" role="alert">
                 <strong>Sukses,</strong> data Merk Berhasil di simpan
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 </button>
@@ -69,7 +69,7 @@ class Merk extends CI_Controller
     if ($this->db->affected_rows() <= 0) {
       $this->session->set_flashdata(
         'info',
-        '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+        '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                   <strong>Maaf,</strong> tidak ada perubahan data
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                     </button>
@@ -79,7 +79,7 @@ class Merk extends CI_Controller
     }
     $this->session->set_flashdata(
       'info',
-      '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+      '<div class="alert alert-success alert-dismissible fade show" role="alert">
               <strong>Sukses,</strong> Data berhasil di update
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -92,7 +92,7 @@ class Merk extends CI_Controller
   public function hapus($id)
   {
     $this->model_merk->hapusData($id);
-    $this->session->set_flashdata('info', '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+    $this->session->set_flashdata('info', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
         <strong>Sukses,</strong> data Merk Berhasil di hapus
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>

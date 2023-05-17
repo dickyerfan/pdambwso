@@ -53,6 +53,8 @@ class Dashboard extends CI_Controller
 
 		$data['s_umum'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi' AND bagian.nama_bagian = 'Umum' AND subag.nama_subag = 'Umum' AND aktif = '1' ")->result();
 
+		$data['s_umumSec'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi(Security)' AND bagian.nama_bagian = 'Umum' AND subag.nama_subag = 'Umum' AND aktif = '1' ")->result();
+
 		$data['k_admin'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Kasubag' AND bagian.nama_bagian = 'Umum' AND subag.nama_subag = 'Administrasi' AND aktif = '1' ")->row();
 
 		$data['s_admin'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi' AND bagian.nama_bagian = 'Umum' AND subag.nama_subag = 'Administrasi' AND aktif = '1' ")->result();
@@ -109,6 +111,8 @@ class Dashboard extends CI_Controller
 
 		$data['bond_s_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Bondowoso' AND aktif = '1' ")->result();
 
+		$data['bond_s_admPm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi(Pembaca Meter)' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Bondowoso' AND aktif = '1' ")->result();
+
 		$data['bond_p_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Pelaksana Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Bondowoso' AND aktif = '1' ")->row();
 
 		$data['bond_s_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Bondowoso' AND aktif = '1' ")->result();
@@ -123,6 +127,8 @@ class Dashboard extends CI_Controller
 		$data['suko1_p_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Pelaksana Administrasi' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 1' AND aktif = '1' ")->row();
 
 		$data['suko1_s_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 1' AND aktif = '1' ")->result();
+
+		$data['suko1_s_admPm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi(Pembaca Meter)' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 1' AND aktif = '1' ")->result();
 
 		$data['suko1_p_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Pelaksana Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 1' AND aktif = '1' ")->row();
 
@@ -251,15 +257,15 @@ class Dashboard extends CI_Controller
 		$data['wonosari_s_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'wonosari' AND aktif = '1' ")->result();
 
 		// Sukosari 2
-		$data['suko2'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Ka UPK' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'suko2' AND aktif = '1' ")->row();
+		$data['suko2'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Ka UPK' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 2' AND aktif = '1' ")->row();
 
-		$data['suko2_p_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Pelaksana Administrasi' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'suko2' AND aktif = '1' ")->row();
+		$data['suko2_p_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Pelaksana Administrasi' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 2' AND aktif = '1' ")->row();
 
-		$data['suko2_s_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'suko2' AND aktif = '1' ")->result();
+		$data['suko2_s_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 2' AND aktif = '1' ")->result();
 
-		$data['suko2_p_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Pelaksana Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'suko2' AND aktif = '1' ")->row();
+		$data['suko2_p_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Pelaksana Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 2' AND aktif = '1' ")->row();
 
-		$data['suko2_s_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'suko2' AND aktif = '1' ")->result();
+		$data['suko2_s_tek'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Teknik' AND bagian.nama_bagian = 'U P K' AND subag.nama_subag = 'Sukosari 2' AND aktif = '1' ")->result();
 
 		//Amdk
 		$data['amdk'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Manager' AND bagian.nama_bagian = 'A M D K' AND subag.nama_subag = 'A M D K' AND aktif = '1' ")->row();
@@ -272,9 +278,9 @@ class Dashboard extends CI_Controller
 
 		$data['amdk_s_pro'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf Administrasi' AND bagian.nama_bagian = 'A M D K' AND subag.nama_subag = 'Produksi' AND aktif = '1' ")->result();
 
-		$data['amdk_lang'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Kabag' AND bagian.nama_bagian = 'A M D K' AND subag.nama_subag = 'Langganan' AND aktif = '1' ")->row();
+		$data['amdk_pasar'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Kabag' AND bagian.nama_bagian = 'A M D K' AND subag.nama_subag = 'Pemasaran' AND aktif = '1' ")->row();
 
-		$data['amdk_s_lang'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf administrasi' AND bagian.nama_bagian = 'A M D K' AND subag.nama_subag = 'Langganan' AND aktif = '1' ")->result();
+		$data['amdk_s_pasar'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Staf administrasi' AND bagian.nama_bagian = 'A M D K' AND subag.nama_subag = 'Pemasaran' AND aktif = '1' ")->result();
 
 		$data['amdk_adm'] = $this->db->query("SELECT * FROM karyawan JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan JOIN bagian ON karyawan.id_bagian = bagian.id_bagian JOIN subag ON karyawan.id_subag = subag.id_subag WHERE jabatan.nama_jabatan = 'Kabag' AND bagian.nama_bagian = 'A M D K' AND subag.nama_subag = 'Administrasi' AND aktif = '1' ")->row();
 

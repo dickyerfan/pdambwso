@@ -39,7 +39,7 @@
                                         <td class="text-center"><small><?= $no++ ?></small></td>
                                         <td class="text-center">
                                             <a href="<?= base_url(); ?>kendaraan/kendaraan_semua/edit/<?= $row->id_kendaraan; ?>"><span class="btn-sm btn btn-primary"><i class="fas fa-fw fa-edit"></i> </span></a>
-                                            <a href="<?= site_url('kendaraan/kendaraan_semua/hapus/' . $row->id_kendaraan); ?>" class="btn-sm btn btn-danger"><i class="fas fa-fw fa-trash"></i> </a>
+                                            <a href="<?= site_url('kendaraan/kendaraan_semua/hapus/' . $row->id_kendaraan); ?>" class="btn-sm btn btn-danger tombolHapus"><i class="fas fa-fw fa-trash"></i> </a>
                                         </td>
                                         <td><?= $row->nama_merk ?></td>
                                         <td><?= $row->nama_type ?></td>

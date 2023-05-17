@@ -11,7 +11,7 @@
                     <?= $this->session->unset_userdata('info'); ?>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
+                    <div class="table-responsive" style="font-size: 0.7rem;">
                         <table id="example" class="table table-hover table-striped table-bordered table-sm" width="100%" cellspacing="0">
                             <thead>
                                 <tr class="bg-secondary text-center">

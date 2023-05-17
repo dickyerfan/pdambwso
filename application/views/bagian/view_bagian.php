@@ -30,7 +30,7 @@
                                         <td><?= $bgn->nama_bagian ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url(); ?>pekerjaan/bagian/edit/<?= $bgn->id_bagian; ?>"><span class="btn btn-primary btn-sm"><i class=" fas fa-fw fa-edit"></i> Edit</span></a>
-                                            <a href="<?= site_url('pekerjaan/bagian/hapus/' . $bgn->id_bagian); ?>" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash"></i> Hapus</a>
+                                            <a href="<?= site_url('pekerjaan/bagian/hapus/' . $bgn->id_bagian); ?>" class="btn btn-danger btn-sm tombolHapus"><i class="fas fa-fw fa-trash"></i> Hapus</a>
                                             <!-- <a href="#" data-toggle="modal" data-target="#hapusModal"><span class="btn btn-danger"><i class="fas fa-fw fa-trash"></i> </span></a> -->
                                         </td>
                                     </tr>

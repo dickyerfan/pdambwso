@@ -10,113 +10,40 @@ class Model_arsip extends CI_Model
         return $this->db->get()->result();
     }
 
-
     public function getdetail($id)
     {
-        $this->db->select('*, bagian.nama_bagian,subag.nama_subag, jabatan.nama_jabatan');
-        $this->db->from('karyawan');
-        $this->db->join('bagian', 'bagian.id_bagian = karyawan.id_bagian');
-        $this->db->join('subag', 'subag.id_subag = karyawan.id_subag');
-        $this->db->join('jabatan', 'jabatan.id_jabatan = karyawan.id_jabatan');
-        $this->db->where('id', $id);
+        $this->db->select('*');
+        $this->db->from('arsip');
+        $this->db->where('id_arsip', $id);
         return $this->db->get()->row();
     }
 
-    public function tambahData()
+    public function getModalEska()
     {
-        $data = [
-            'nama' => $this->input->post('nama', true),
-            'alamat' => $this->input->post('alamat', true),
-            'nik' => $this->input->post('nik', true),
-            'no_hp' => $this->input->post('no_hp', true),
-            'agama' => $this->input->post('agama', true),
-            'status_pegawai' => $this->input->post('status_pegawai', true),
-            'jenkel' => $this->input->post('jenkel', true),
-            'tmp_lahir' => $this->input->post('tmp_lahir', true),
-            'tgl_lahir' => $this->input->post('tgl_lahir', true),
-            'tgl_masuk' => $this->input->post('tgl_masuk', true),
-            'id_bagian' => $this->input->post('id_bagian', true),
-            'id_subag' => $this->input->post('id_subag', true),
-            'id_jabatan' => $this->input->post('id_jabatan', true)
-        ];
-        $this->db->insert('karyawan', $data);
+        $this->db->select('nama_dokumen');
+        $this->db->from('arsip');
+        $this->db->where('jenis', 'Surat Keputusan');
+        return $this->db->get()->result();
     }
-
-    public function getIdKaryawan($id)
+    public function getModalPer()
     {
-        return $this->db->get_where('karyawan', ['id' => $id])->row();
+        $this->db->select('nama_dokumen');
+        $this->db->from('arsip');
+        $this->db->where('jenis', 'Peraturan');
+        return $this->db->get()->result();
     }
-
-    public function updateData()
+    public function getModalBer()
     {
-        $data = [
-            'nama' => $this->input->post('nama', true),
-            'alamat' => $this->input->post('alamat', true),
-            'nik' => $this->input->post('nik', true),
-            'no_hp' => $this->input->post('no_hp', true),
-            'agama' => $this->input->post('agama', true),
-            'status_pegawai' => $this->input->post('status_pegawai', true),
-            'jenkel' => $this->input->post('jenkel', true),
-            'tmp_lahir' => $this->input->post('tmp_lahir', true),
-            'tgl_lahir' => $this->input->post('tgl_lahir', true),
-            'tgl_masuk' => $this->input->post('tgl_masuk', true),
-            // 'id_bagian' => $this->input->post('id_bagian', true),
-            // 'id_subag' => $this->input->post('id_subag', true),
-            // 'id_jabatan' => $this->input->post('id_jabatan', true),
-            // 'aktif' => $this->input->post('aktif', true)
-        ];
-        $this->db->where('id', $this->input->post('id'));
-        $this->db->update('karyawan', $data);
+        $this->db->select('nama_dokumen');
+        $this->db->from('arsip');
+        $this->db->where('jenis', 'Berkas Kerja');
+        return $this->db->get()->result();
     }
-
-    public function updateDataMutasi()
+    public function getModalDok()
     {
-        $data = [
-            'id_bagian' => $this->input->post('id_bagian', true),
-            'id_subag' => $this->input->post('id_subag', true),
-            'id_jabatan' => $this->input->post('id_jabatan', true)
-        ];
-        $this->db->where('id', $this->input->post('id'));
-        $this->db->update('karyawan', $data);
-    }
-    public function updateDataPurna()
-    {
-        $data = [
-            'aktif' => $this->input->post('aktif', true),
-        ];
-        $this->db->where('id', $this->input->post('id'));
-        $this->db->update('karyawan', $data);
-    }
-
-    public function hapusData($id)
-    {
-        $this->db->where('id', $id);
-        $this->db->delete('karyawan');
-    }
-
-    public function getKaryawanTetap()
-    {
-        return $this->db->get_where('karyawan', [
-            'status_pegawai' => 'Karyawan Tetap',
-            'aktif' => '1'
-        ])->result();
-    }
-    public function getKaryawanKontrak()
-    {
-        return $this->db->get_where('karyawan', [
-            'status_pegawai' => 'Karyawan Kontrak',
-            'aktif' => '1'
-        ])->result();
-    }
-    public function getKaryawanHonorer()
-    {
-        return $this->db->get_where('karyawan', [
-            'status_pegawai' => 'Karyawan Honorer',
-            'aktif' => '1'
-        ])->result();
-    }
-    public function getKaryawanPurna()
-    {
-        return $this->db->get_where('karyawan', ['aktif' => '0'])->result();
+        $this->db->select('nama_dokumen');
+        $this->db->from('arsip');
+        $this->db->where('jenis', 'Dokumen');
+        return $this->db->get()->result();
     }
 }

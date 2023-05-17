@@ -57,7 +57,7 @@ class Karyawan_semua extends CI_Controller
             $data['karyawan'] = $this->model_karyawan->tambahData();
             $this->session->set_flashdata(
                 'info',
-                '<div class="alert alert-primary alert-dismissible fade show" role="alert" style="width:50%;">
+                '<div class="alert alert-primary alert-dismissible fade show" role="alert">
                         <strong>Sukses,</strong> Data berhasil di tambah
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
@@ -87,7 +87,7 @@ class Karyawan_semua extends CI_Controller
         if ($this->db->affected_rows() <= 0) {
             $this->session->set_flashdata(
                 'info',
-                '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+                '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                         <strong>Maaf,</strong> tidak ada perubahan data
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
@@ -97,7 +97,7 @@ class Karyawan_semua extends CI_Controller
         } else {
             $this->session->set_flashdata(
                 'info',
-                '<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+                '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>Sukses,</strong> Data berhasil di update
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                         </button>
@@ -112,7 +112,7 @@ class Karyawan_semua extends CI_Controller
         $this->model_karyawan->hapusData($id);
         $this->session->set_flashdata(
             'info',
-            '<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+            '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Sukses,</strong> Data berhasil di hapus
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                     </button>

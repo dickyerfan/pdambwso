@@ -30,7 +30,7 @@
                                         <td><?= $sbg->nama_subag ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url(); ?>pekerjaan/subag/edit/<?= $sbg->id_subag; ?>"><span class="btn-sm btn btn-primary"><i class="fas fa-fw fa-edit"></i> </span></a>
-                                            <a href="<?= site_url('pekerjaan/subag/hapus/' . $sbg->id_subag); ?>" class="btn-sm btn btn-danger"><i class="fas fa-fw fa-trash"></i></a>
+                                            <a href="<?= site_url('pekerjaan/subag/hapus/' . $sbg->id_subag); ?>" class="btn-sm btn btn-danger tombolHapus"><i class="fas fa-fw fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -46,7 +46,7 @@ class Password extends CI_Controller
 			if (!password_verify($passwordLama, $cek_pass->password)) {
 				$this->session->set_flashdata(
 					'info',
-					'<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+					'<div class="alert alert-danger alert-dismissible fade show" role="alert">
 							<strong>Maaf,</strong> Password saat ini salah
 							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
 							</button>
@@ -57,7 +57,7 @@ class Password extends CI_Controller
 				if ($passwordLama == $passwordBaru) {
 					$this->session->set_flashdata(
 						'info',
-						'<div class="alert alert-danger alert-dismissible fade show" role="alert" style="width:50%;">
+						'<div class="alert alert-danger alert-dismissible fade show" role="alert">
 								<strong>Maaf,</strong> Password lama tidak boleh sama dengan password baru
 								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
 								</button>
@@ -72,7 +72,7 @@ class Password extends CI_Controller
 
 					$this->session->set_flashdata(
 						'info',
-						'<div class="alert alert-success alert-dismissible fade show" role="alert" style="width:50%;">
+						'<div class="alert alert-success alert-dismissible fade show" role="alert">
 								<strong>Selamat,</strong> Password berhasil di ganti
 								<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
 								</button>

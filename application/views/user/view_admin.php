@@ -36,7 +36,7 @@
                                         <td><?= $row->level ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url(); ?>user/admin/edit/<?= $row->id; ?>"><span class="btn btn-primary btn-sm"><i class="fas fa-fw fa-edit"></i> Edit</span></a>
-                                            <a href="<?= base_url(); ?>user/admin/hapus/<?= $row->id; ?>" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url(); ?>user/admin/hapus/<?= $row->id; ?>" class="btn btn-danger btn-sm tombolHapus"><i class="fas fa-fw fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

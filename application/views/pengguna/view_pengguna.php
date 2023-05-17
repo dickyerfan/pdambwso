@@ -312,7 +312,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-success text-light">
-                    <h5 class="modal-title" id="umum">Pengaduan Pelanggan</h5>
+                    <h5 class="modal-title" id="umum">Umum & Administrasi</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 
                     </button>
@@ -600,6 +600,14 @@
                                     <td><?= $row->nama ?></td>
                                 </tr>
                             <?php endforeach;  ?>
+                            <?php foreach ($suko1_s_admPm as $row) : ?>
+                                <tr>
+                                    <td>Staf Administrasi Pembaca Meter</td>
+                                    <td> : </td>
+                                    <?php $suko1_s_admPm = isset($suko1_s_admPm->nama)  ? $suko1_s_admPm->nama : ''  ?>
+                                    <td><?= $row->nama ?></td>
+                                </tr>
+                            <?php endforeach;  ?>
                             <tr>
                                 <td>Pelaksana Teknik</td>
                                 <td> : </td>
@@ -625,7 +633,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-warning text-dark">
-                    <h5 class="modal-title" id="bondowoso">UPK SUKOSARI 1</h5>
+                    <h5 class="modal-title" id="bondowoso">UPK BONDOWOSO</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 
                     </button>
@@ -650,6 +658,14 @@
                                     <td>Staf Administrasi</td>
                                     <td> : </td>
                                     <?php $bond_s_adm = isset($bond_s_adm->nama)  ? $bond_s_adm->nama : ''  ?>
+                                    <td><?= $row->nama ?></td>
+                                </tr>
+                            <?php endforeach;  ?>
+                            <?php foreach ($bond_s_admPm as $row) : ?>
+                                <tr>
+                                    <td>Staf Administrasi Pembaca Meter</td>
+                                    <td> : </td>
+                                    <?php $bond_s_admPm = isset($bond_s_admPm->nama)  ? $bond_s_admPm->nama : ''  ?>
                                     <td><?= $row->nama ?></td>
                                 </tr>
                             <?php endforeach;  ?>
@@ -1398,16 +1414,16 @@
                                 </tr>
                             <?php endforeach;  ?>
                             <tr>
-                                <td>Kabag Hub Langganan</td>
+                                <td>Kabag Pemasaran</td>
                                 <td> : </td>
-                                <?php $amdk_lang = isset($amdk_lang->nama)  ? $amdk_lang->nama : ''  ?>
-                                <td><?= $amdk_lang ?></td>
+                                <?php $amdk_pasar = isset($amdk_pasar->nama)  ? $amdk_pasar->nama : ''  ?>
+                                <td><?= $amdk_pasar ?></td>
                             </tr>
-                            <?php foreach ($amdk_s_lang as $row) : ?>
+                            <?php foreach ($amdk_s_pasar as $row) : ?>
                                 <tr>
-                                    <td>Staf Langganan</td>
+                                    <td>Staf Pemasaran</td>
                                     <td> : </td>
-                                    <?php $amdk_s_lang = isset($amdk_s_lang->nama)  ? $amdk_s_lang->nama : ''  ?>
+                                    <?php $amdk_s_pasar = isset($amdk_s_pasar->nama)  ? $amdk_s_pasar->nama : ''  ?>
                                     <td><?= $row->nama ?></td>
                                 </tr>
                             <?php endforeach;  ?>

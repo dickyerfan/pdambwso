@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <a href="<?= base_url('karyawan/karyawan_semua'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
+                    <a href="<?= base_url('karyawan/karyawan_dashboard'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
                 </div>
                 <div class="p-2">
                     <?= $this->session->flashdata('info'); ?>
@@ -53,7 +53,7 @@
                                                 $date2 = new DateTime($waktuSkrng);
                                                 $durasi = $date1->diff($date2);
                                                 ?>
-                                                <td class="fw-bold"><?= $durasi->format('%Y Tahun %m bulan %d hari'); ?></td>
+                                                <td class="fw-bold"><?= $waktuMasuk == '0000-00-00' ? '-' : $durasi->format('%Y Tahun %m bulan %d hari'); ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Tanggal Purna</td>
@@ -63,10 +63,29 @@
                                                 $waktuKerja = '+56 years';
                                                 $waktuPurna = DateTime::createFromFormat('Y-m-d', $waktuLahir);
                                                 $waktuPurna->modify($waktuKerja);
+                                                // Daftar nama bulan dalam bahasa Indonesia
+                                                $namaBulan = array(
+                                                    'January' => 'Januari',
+                                                    'February' => 'Februari',
+                                                    'March' => 'Maret',
+                                                    'April' => 'April',
+                                                    'May' => 'Mei',
+                                                    'June' => 'Juni',
+                                                    'July' => 'Juli',
+                                                    'August' => 'Agustus',
+                                                    'September' => 'September',
+                                                    'October' => 'Oktober',
+                                                    'November' => 'November',
+                                                    'December' => 'Desember'
+                                                );
+                                                // Format tanggal dengan nama bulan dalam bahasa Indonesia
+                                                $tanggalPurna = date('d', strtotime($waktuPurna->format('Y-m-d'))) . ' ' . $namaBulan[$waktuPurna->format('F')] . ' ' . $waktuPurna->format('Y');
+
                                                 $waktuSkrng = date('Y');
                                                 $sisa = $waktuPurna->format('Y') - $waktuSkrng;
                                                 ?>
-                                                <td class="fw-bold"><?= $waktuPurna->format('d F Y'); ?></td>
+                                                <!-- <td class="fw-bold"><?= $waktuPurna->format('d F Y'); ?></td> -->
+                                                <td class="fw-bold"><?= $tanggalPurna ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Sisa Masa Kerja</td>
@@ -76,6 +95,57 @@
                                         </tbody>
                                     </table>
                                 </div>
+                                <?php
+                                function ubahNamaBulan($tanggal)
+                                {
+                                    $tgl_masuk = strtotime($tanggal);
+                                    $day = date('d', $tgl_masuk);
+                                    $bln = date('m', $tgl_masuk);
+                                    $tahun = date('Y', $tgl_masuk);
+                                    switch ($bln) {
+                                        case '01':
+                                            $bln = "Januari";
+                                            break;
+                                        case '02':
+                                            $bln = "Februari";
+                                            break;
+                                        case '03':
+                                            $bln = "Maret";
+                                            break;
+                                        case '04':
+                                            $bln = "April";
+                                            break;
+                                        case '05':
+                                            $bln = "Mei";
+                                            break;
+                                        case '06':
+                                            $bln = "Juni";
+                                            break;
+                                        case '07':
+                                            $bln = "Juli";
+                                            break;
+                                        case '08':
+                                            $bln = "Agustus";
+                                            break;
+                                        case '09':
+                                            $bln = "September";
+                                            break;
+                                        case '10':
+                                            $bln = "Oktober";
+                                            break;
+                                        case '11':
+                                            $bln = "November";
+                                            break;
+                                        case '12':
+                                            $bln = "Desember";
+                                            break;
+                                    }
+                                    return $day . ' ' . $bln . ' ' . $tahun;
+                                }
+
+                                $tanggalMasuk = ubahNamaBulan($karyawan->tgl_masuk);
+                                $tanggalLahir = ubahNamaBulan($karyawan->tgl_lahir);
+                                ?>
                                 <div class="col-md-6">
                                     <table class="table">
                                         <tbody>
@@ -107,12 +177,12 @@
                                             <tr>
                                                 <td>Tanggal Lahir</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= date('d F Y', strtotime($karyawan->tgl_lahir)) ?></td>
+                                                <td class="fw-bold"><?= $tanggalLahir ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Tanggal Masuk</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= date('d F Y', strtotime($karyawan->tgl_masuk))  ?></td>
+                                                <td class="fw-bold"><?= $karyawan->tgl_masuk == '0000-00-00' ? '-' : $tanggalMasuk  ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Aktif</td>

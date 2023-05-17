@@ -57,7 +57,7 @@
 </script>
 
 <script>
-    $('.btn-danger').on('click', function(e) {
+    $('.tombolHapus').on('click', function(e) {
         e.preventDefault();
         const href = $(this).attr('href');
         Swal.fire({
@@ -343,6 +343,16 @@
             }
         }
     });
+</script>
+<script>
+    window.setTimeout(function() {
+        $(".alert").animate({
+            left: "+=50",
+            width: "350"
+        }, 5000, function() {}).fadeTo(1000, 0).slideUp(1000, function() {
+            $(this).remove();
+        });
+    }, 1000);
 </script>
 <!-- <script>
     // Set new default font family and font color to mimic Bootstrap's default styling

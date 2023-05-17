@@ -30,7 +30,7 @@
                                         <td><?= $row->nama_upk ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url(); ?>rekening/nama_upk/edit/<?= $row->id_upk; ?>"><span class="btn btn-primary btn-sm"><i class=" fas fa-fw fa-edit"></i> Edit</span></a>
-                                            <a href="<?= site_url('rekening/nama_upk/hapus/' . $row->id_upk); ?>" class="btn btn-danger btn-sm"><i class="fas fa-fw fa-trash"></i> Hapus</a>
+                                            <a href="<?= site_url('rekening/nama_upk/hapus/' . $row->id_upk); ?>" class="btn btn-danger btn-sm tombolHapus"><i class="fas fa-fw fa-trash"></i> Hapus</a>
                                             <!-- <a href="#" data-toggle="modal" data-target="#hapusModal"><span class="btn btn-danger"><i class="fas fa-fw fa-trash"></i> </span></a> -->
                                         </td>
                                     </tr>

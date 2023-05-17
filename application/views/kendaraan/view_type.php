@@ -30,7 +30,7 @@
                                         <td><?= $row->nama_type ?></td>
                                         <td class="text-center">
                                             <a href="<?= base_url(); ?>kendaraan/type/edit/<?= $row->id_type; ?>"><span class="btn-sm btn btn-primary"><i class="fas fa-fw fa-edit"></i> Edit</span></a>
-                                            <a href="<?= base_url(); ?>kendaraan/type/hapus/<?= $row->id_type; ?>" class="btn-sm btn btn-danger"><i class="fas fa-fw fa-trash"></i> Hapus</a>
+                                            <a href="<?= base_url(); ?>kendaraan/type/hapus/<?= $row->id_type; ?>" class="btn-sm btn btn-danger tombolHapus"><i class="fas fa-fw fa-trash"></i> Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

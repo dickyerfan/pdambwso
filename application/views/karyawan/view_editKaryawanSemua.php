@@ -4,10 +4,10 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <a href="<?= base_url('karyawan/karyawan_semua'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
+                    <a href="<?= base_url('karyawan/karyawan_dashboard'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
                 </div>
                 <div class="card-body">
-                    <form class="user" action="<?= base_url('karyawan/karyawan_semua/update') ?>" method="POST">
+                    <form class="user" action="<?= base_url('karyawan/karyawan_dashboard/update') ?>" method="POST">
                         <div class="row">
                             <div class="col-md-4 mb-2 mb-2">
                                 <input type="hidden" name="id" id="id" value="<?= $karyawan->id; ?>">
