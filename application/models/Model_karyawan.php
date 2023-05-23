@@ -10,6 +10,9 @@ class Model_karyawan extends CI_Model
         $this->db->join('bagian', 'bagian.id_bagian = karyawan.id_bagian');
         $this->db->join('subag', 'subag.id_subag = karyawan.id_subag');
         $this->db->join('jabatan', 'jabatan.id_jabatan = karyawan.id_jabatan');
+        // $this->db->order_by('nama', 'ASC');
+        // $this->db->order_by('bagian.nama_bagian', 'ASC');
+        // $this->db->order_by('subag.nama_subag', 'ASC');
         // $this->db->where('aktif', '1');
         return $this->db->get()->result();
     }
@@ -26,8 +29,10 @@ class Model_karyawan extends CI_Model
 
     public function tambahData()
     {
+        $nama = ucwords(strtolower($this->input->post('nama', true)));
+
         $data = [
-            'nama' => $this->input->post('nama', true),
+            'nama' => $nama,
             'alamat' => $this->input->post('alamat', true),
             'nik' => $this->input->post('nik', true),
             'no_hp' => $this->input->post('no_hp', true),

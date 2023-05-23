@@ -144,6 +144,7 @@
                                     <th>Tempat lahir</th>
                                     <th>Tanggal lahir</th>
                                     <th>Tanggal Masuk</th>
+                                    <th>Umur</th>
                                     <th>Aktif</th>
                                 </tr>
                             </thead>
@@ -153,49 +154,12 @@
                                 foreach ($karyawan as $row) :
                                 ?>
                                     <?php
-                                    $tgls = strtotime($row->tgl_lahir);
-                                    $day = date('d', $tgls);
-                                    $bln = date('m', $tgls);
-                                    $tahun = date('Y', $tgls);
+                                    $tanggalLahir = ubahNamaBulan($row->tgl_lahir);
+                                    $tanggalMasuk = ubahNamaBulan($row->tgl_masuk);
 
-                                    switch ($bln) {
-                                        case '01':
-                                            $bln = "Januari";
-                                            break;
-                                        case '02':
-                                            $bln = "Februari";
-                                            break;
-                                        case '03':
-                                            $bln = "Maret";
-                                            break;
-                                        case '04':
-                                            $bln = "April";
-                                            break;
-                                        case '05':
-                                            $bln = "Mei";
-                                            break;
-                                        case '06':
-                                            $bln = "Juni";
-                                            break;
-                                        case '07':
-                                            $bln = "Juli";
-                                            break;
-                                        case '08':
-                                            $bln = "Agustus";
-                                            break;
-                                        case '09':
-                                            $bln = "September";
-                                            break;
-                                        case '10':
-                                            $bln = "Oktober";
-                                            break;
-                                        case '11':
-                                            $bln = "November";
-                                            break;
-                                        case '12':
-                                            $bln = "Desember";
-                                            break;
-                                    }
+                                    $tgl_lahir = new DateTime($row->tgl_lahir);
+                                    $tgl_skrng = new DateTime();
+                                    $umur = $tgl_skrng->diff($tgl_lahir)->y;
                                     ?>
                                     <tr>
                                         <td class="text-center"><small><?= $no++ ?></small></td>
@@ -208,16 +172,16 @@
                                         <td><?= $row->nik ?></td>
                                         <td><?= $row->nama_bagian ?></td>
                                         <td><?= $row->nama_subag ?></td>
-                                        <td><?= $row->nama_jabatan ?></td>
+                                        <td class="text-center"><?= $row->nama_jabatan ?></td>
                                         <td><?= $row->alamat ?></td>
                                         <td><?= $row->agama ?></td>
                                         <td><?= $row->status_pegawai ?></td>
                                         <td><?= $row->no_hp ?></td>
                                         <td><?= $row->jenkel ?></td>
                                         <td><?= $row->tmp_lahir ?></td>
-                                        <td><?= $day . ' ' . $bln . ' ' . $tahun ?></td>
-                                        <!-- <td><?= $row->tgl_lahir ?></td> -->
-                                        <td><?= $row->tgl_masuk ?></td>
+                                        <td><?= $tanggalLahir ?></td>
+                                        <td><?= $tanggalMasuk == '30 November -0001' ? '-' : $tanggalMasuk ?></td>
+                                        <td class="text-center"><?= $umur ?></td>
                                         <td><?= $row->aktif == 1 ? 'Aktif' : 'Purna' ?></td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -50,7 +50,7 @@ class karyawan_dashboard extends CI_Controller
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
         $this->form_validation->set_rules('alamat', 'Alamat', 'required|trim');
         $this->form_validation->set_rules('nik', 'NIK', 'is_unique[karyawan.nik]');
-        $this->form_validation->set_rules('no_hp', 'NO HP', 'required|trim|min_length[10]');
+        $this->form_validation->set_rules('no_hp', 'NO HP', 'trim|min_length[10]');
         $this->form_validation->set_rules('agama', 'Agama', 'required|trim');
         $this->form_validation->set_rules('tmp_lahir', 'Tempat Lahir', 'required|trim');
         $this->form_validation->set_rules('tgl_lahir', 'Tanggal Lahir', 'required|trim');

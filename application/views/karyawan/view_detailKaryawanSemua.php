@@ -96,52 +96,9 @@
                                     </table>
                                 </div>
                                 <?php
-                                function ubahNamaBulan($tanggal)
-                                {
-                                    $tgl_masuk = strtotime($tanggal);
-                                    $day = date('d', $tgl_masuk);
-                                    $bln = date('m', $tgl_masuk);
-                                    $tahun = date('Y', $tgl_masuk);
-                                    switch ($bln) {
-                                        case '01':
-                                            $bln = "Januari";
-                                            break;
-                                        case '02':
-                                            $bln = "Februari";
-                                            break;
-                                        case '03':
-                                            $bln = "Maret";
-                                            break;
-                                        case '04':
-                                            $bln = "April";
-                                            break;
-                                        case '05':
-                                            $bln = "Mei";
-                                            break;
-                                        case '06':
-                                            $bln = "Juni";
-                                            break;
-                                        case '07':
-                                            $bln = "Juli";
-                                            break;
-                                        case '08':
-                                            $bln = "Agustus";
-                                            break;
-                                        case '09':
-                                            $bln = "September";
-                                            break;
-                                        case '10':
-                                            $bln = "Oktober";
-                                            break;
-                                        case '11':
-                                            $bln = "November";
-                                            break;
-                                        case '12':
-                                            $bln = "Desember";
-                                            break;
-                                    }
-                                    return $day . ' ' . $bln . ' ' . $tahun;
-                                }
+                                $tgl_lahir = new DateTime($karyawan->tgl_lahir);
+                                $tgl_skrng = new DateTime();
+                                $umur = $tgl_skrng->diff($tgl_lahir)->y;
 
                                 $tanggalMasuk = ubahNamaBulan($karyawan->tgl_masuk);
                                 $tanggalLahir = ubahNamaBulan($karyawan->tgl_lahir);
@@ -177,7 +134,7 @@
                                             <tr>
                                                 <td>Tanggal Lahir</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $tanggalLahir ?></td>
+                                                <td class="fw-bold"><?= $tanggalLahir . ' / ' . $umur ?> Tahun</td>
                                             </tr>
                                             <tr>
                                                 <td>Tanggal Masuk</td>

@@ -75,8 +75,8 @@
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-2">
-							<div class="card bg-warning text-dark mb-4 shadow">
-								<div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#bondowoso">
+							<div class="card bg-warning border-0 text-dark mb-4 shadow">
+								<div class="card-body text-center fw-bold bg-light cardEffect border-start border-warning border-5 rounded" data-bs-toggle="modal" data-bs-target="#bondowoso">
 									Bondowoso
 								</div>
 							</div>
@@ -235,7 +235,7 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Ketua</td>
+								<td class="fw-bold">Ketua</td>
 								<td> : </td>
 								<?php $spi = isset($spi->nama)  ? $spi->nama : ''  ?>
 								<td><?= $spi ?></td>
@@ -268,13 +268,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Kabag</td>
+								<td class="fw-bold">Kabag</td>
 								<td> : </td>
 								<?php $lang = isset($lang->nama)  ? $lang->nama : ''  ?>
 								<td><?= $lang ?></td>
 							</tr>
 							<tr>
-								<td>Kasubag Langganan</td>
+								<td class="fw-bold">Kasubag Langganan</td>
 								<td> : </td>
 								<?php $k_lang = isset($k_lang->nama)  ? $k_lang->nama : ''  ?>
 								<td><?= $k_lang ?></td>
@@ -288,7 +288,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kasubag Penagihan</td>
+								<td class="fw-bold">Kasubag Penagihan</td>
 								<td> : </td>
 								<?php $k_tagih = isset($k_tagih->nama)  ? $k_tagih->nama : ''  ?>
 								<td><?= $k_tagih ?></td>
@@ -322,13 +322,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Kabag</td>
+								<td class="fw-bold">Kabag</td>
 								<td> : </td>
 								<?php $umum = isset($umum->nama)  ? $umum->nama : ''  ?>
 								<td><?= $umum ?></td>
 							</tr>
 							<tr>
-								<td>Kasubag Umum</td>
+								<td class="fw-bold">Kasubag Umum</td>
 								<td> : </td>
 								<?php $k_umum = isset($k_umum->nama)  ? $k_umum->nama : ''  ?>
 								<td><?= $k_umum ?></td>
@@ -349,9 +349,8 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
-
 							<tr>
-								<td>Kasubag Administrasi</td>
+								<td class="fw-bold">Kasubag Administrasi</td>
 								<td> : </td>
 								<?php $k_admin = isset($k_admin->nama)  ? $k_admin->nama : ''  ?>
 								<td><?= $k_admin ?></td>
@@ -365,7 +364,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kasubag Personalia</td>
+								<td class="fw-bold">Kasubag Personalia</td>
 								<td> : </td>
 								<?php $k_person = isset($k_person->nama)  ? $k_person->nama : ''  ?>
 								<td><?= $k_person ?></td>
@@ -399,13 +398,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Kabag</td>
+								<td class="fw-bold">Kabag</td>
 								<td> : </td>
 								<?php $keu = isset($keu->nama)  ? $keu->nama : ''  ?>
 								<td><?= $keu ?></td>
 							</tr>
 							<tr>
-								<td>Kasubag Pembukuan</td>
+								<td class="fw-bold">Kasubag Pembukuan</td>
 								<td> : </td>
 								<?php $k_buku = isset($k_buku->nama)  ? $k_buku->nama : ''  ?>
 								<td><?= $k_buku ?></td>
@@ -419,7 +418,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kasubag Kas</td>
+								<td class="fw-bold">Kasubag Kas</td>
 								<td> : </td>
 								<?php $k_kas = isset($k_kas->nama)  ? $k_kas->nama : ''  ?>
 								<td><?= $k_kas ?></td>
@@ -433,7 +432,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kasubag Rekening</td>
+								<td class="fw-bold">Kasubag Rekening</td>
 								<td> : </td>
 								<?php $k_rek = isset($k_rek->nama)  ? $k_rek->nama : ''  ?>
 								<td><?= $k_rek ?></td>
@@ -467,13 +466,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Kabag</td>
+								<td class="fw-bold">Kabag</td>
 								<td> : </td>
 								<?php $renc = isset($renc->nama)  ? $renc->nama : ''  ?>
 								<td><?= $renc ?></td>
 							</tr>
 							<tr>
-								<td>Kasubag Perencanaan</td>
+								<td class="fw-bold">Kasubag Perencanaan</td>
 								<td> : </td>
 								<?php $k_renc = isset($k_renc->nama)  ? $k_renc->nama : ''  ?>
 								<td><?= $k_renc ?></td>
@@ -487,7 +486,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kasubag Pengawasan</td>
+								<td class="fw-bold">Kasubag Pengawasan</td>
 								<td> : </td>
 								<?php $k_awas = isset($k_awas->nama)  ? $k_awas->nama : ''  ?>
 								<td><?= $k_awas ?></td>
@@ -521,13 +520,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Kabag</td>
+								<td class="fw-bold">Kabag</td>
 								<td> : </td>
 								<?php $peml = isset($peml->nama)  ? $peml->nama : ''  ?>
 								<td><?= $peml ?></td>
 							</tr>
 							<tr>
-								<td>Kasubag Pemeliharaan</td>
+								<td class="fw-bold">Kasubag Pemeliharaan</td>
 								<td> : </td>
 								<?php $k_peml = isset($k_peml->nama)  ? $k_peml->nama : ''  ?>
 								<td><?= $k_peml ?></td>
@@ -549,7 +548,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kasubag Peralatan</td>
+								<td class="fw-bold">Kasubag Peralatan</td>
 								<td> : </td>
 								<?php $k_alat = isset($k_alat->nama)  ? $k_alat->nama : ''  ?>
 								<td><?= $k_alat ?></td>
@@ -591,13 +590,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $suko1 = isset($suko1->nama)  ? $suko1->nama : ''  ?>
 								<td><?= $suko1 ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $suko1_p_adm = isset($suko1_p_adm->nama)  ? $suko1_p_adm->nama : ''  ?>
 								<td><?= $suko1_p_adm ?></td>
@@ -619,7 +618,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $suko1_p_tek = isset($suko1_p_tek->nama)  ? $suko1_p_tek->nama : ''  ?>
 								<td><?= $suko1_p_tek ?></td>
@@ -652,13 +651,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $bond = isset($bond->nama)  ? $bond->nama : ''  ?>
 								<td><?= $bond ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $bond_p_adm = isset($bond_p_adm->nama)  ? $bond_p_adm->nama : ''  ?>
 								<td><?= $bond_p_adm ?></td>
@@ -680,7 +679,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $bond_p_tek = isset($bond_p_tek->nama)  ? $bond_p_tek->nama : ''  ?>
 								<td><?= $bond_p_tek ?></td>
@@ -694,14 +693,14 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Pengaduan Pelanggan</td>
+								<td class="fw-bold">Pelaksana Pelayanan Pelanggan</td>
 								<td> : </td>
 								<?php $bond_p_lang = isset($bond_p_lang->nama)  ? $bond_p_lang->nama : ''  ?>
 								<td><?= $bond_p_lang ?></td>
 							</tr>
 							<?php foreach ($bond_s_lang as $row) : ?>
 								<tr>
-									<td>Staf Pengaduan Pelanggan</td>
+									<td>Staf Pelayanan Pelanggan</td>
 									<td> : </td>
 									<?php $bond_s_lang = isset($bond_s_lang->nama)  ? $bond_s_lang->nama : ''  ?>
 									<td><?= $row->nama ?></td>
@@ -728,13 +727,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $maesan = isset($maesan->nama)  ? $maesan->nama : ''  ?>
 								<td><?= $maesan ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $maesan_p_adm = isset($maesan_p_adm->nama)  ? $maesan_p_adm->nama : ''  ?>
 								<td><?= $maesan_p_adm ?></td>
@@ -747,8 +746,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($maesan_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $maesan_s_admPm = isset($maesan_s_admPm->nama)  ? $maesan_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $maesan_p_tek = isset($maesan_p_tek->nama)  ? $maesan_p_tek->nama : ''  ?>
 								<td><?= $maesan_p_tek ?></td>
@@ -782,13 +789,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $tegalampel = isset($tegalampel->nama)  ? $tegalampel->nama : ''  ?>
 								<td><?= $tegalampel ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $tegalampel_p_adm = isset($tegalampel_p_adm->nama)  ? $tegalampel_p_adm->nama : ''  ?>
 								<td><?= $tegalampel_p_adm ?></td>
@@ -801,8 +808,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($tegalampel_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $tegalampel_s_admPm = isset($tegalampel_s_admPm->nama)  ? $tegalampel_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $tegalampel_p_tek = isset($tegalampel_p_tek->nama)  ? $tegalampel_p_tek->nama : ''  ?>
 								<td><?= $tegalampel_p_tek ?></td>
@@ -836,13 +851,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $tapen = isset($tapen->nama)  ? $tapen->nama : ''  ?>
 								<td><?= $tapen ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $tapen_p_adm = isset($tapen_p_adm->nama)  ? $tapen_p_adm->nama : ''  ?>
 								<td><?= $tapen_p_adm ?></td>
@@ -855,8 +870,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($tapen_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $tapen_s_admPm = isset($tapen_s_admPm->nama)  ? $tapen_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $tapen_p_tek = isset($tapen_p_tek->nama)  ? $tapen_p_tek->nama : ''  ?>
 								<td><?= $tapen_p_tek ?></td>
@@ -890,13 +913,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $prajekan = isset($prajekan->nama)  ? $prajekan->nama : ''  ?>
 								<td><?= $prajekan ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $prajekan_p_adm = isset($prajekan_p_adm->nama)  ? $prajekan_p_adm->nama : ''  ?>
 								<td><?= $prajekan_p_adm ?></td>
@@ -909,8 +932,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($prajekan_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $prajekan_s_admPm = isset($prajekan_s_admPm->nama)  ? $prajekan_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $prajekan_p_tek = isset($prajekan_p_tek->nama)  ? $prajekan_p_tek->nama : ''  ?>
 								<td><?= $prajekan_p_tek ?></td>
@@ -944,13 +975,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $tlogosari = isset($tlogosari->nama)  ? $tlogosari->nama : ''  ?>
 								<td><?= $tlogosari ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $tlogosari_p_adm = isset($tlogosari_p_adm->nama)  ? $tlogosari_p_adm->nama : ''  ?>
 								<td><?= $tlogosari_p_adm ?></td>
@@ -963,8 +994,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($tlogosari_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $tlogosari_s_admPm = isset($tlogosari_s_admPm->nama)  ? $tlogosari_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $tlogosari_p_tek = isset($tlogosari_p_tek->nama)  ? $tlogosari_p_tek->nama : ''  ?>
 								<td><?= $tlogosari_p_tek ?></td>
@@ -998,13 +1037,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $wringin = isset($wringin->nama)  ? $wringin->nama : ''  ?>
 								<td><?= $wringin ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $wringin_p_adm = isset($wringin_p_adm->nama)  ? $wringin_p_adm->nama : ''  ?>
 								<td><?= $wringin_p_adm ?></td>
@@ -1017,8 +1056,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($wringin_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $wringin_s_admPm = isset($wringin_s_admPm->nama)  ? $wringin_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $wringin_p_tek = isset($wringin_p_tek->nama)  ? $wringin_p_tek->nama : ''  ?>
 								<td><?= $wringin_p_tek ?></td>
@@ -1052,13 +1099,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $curahdami = isset($curahdami->nama)  ? $curahdami->nama : ''  ?>
 								<td><?= $curahdami ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $curahdami_p_adm = isset($curahdami_p_adm->nama)  ? $curahdami_p_adm->nama : ''  ?>
 								<td><?= $curahdami_p_adm ?></td>
@@ -1071,8 +1118,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($curahdami_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $curahdami_s_admPm = isset($curahdami_s_admPm->nama)  ? $curahdami_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $curahdami_p_tek = isset($curahdami_p_tek->nama)  ? $curahdami_p_tek->nama : ''  ?>
 								<td><?= $curahdami_p_tek ?></td>
@@ -1106,13 +1161,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $tamanan = isset($tamanan->nama)  ? $tamanan->nama : ''  ?>
 								<td><?= $tamanan ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $tamanan_p_adm = isset($tamanan_p_adm->nama)  ? $tamanan_p_adm->nama : ''  ?>
 								<td><?= $tamanan_p_adm ?></td>
@@ -1125,8 +1180,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($tamanan_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $tamanan_s_admPm = isset($tamanan_s_admPm->nama)  ? $tamanan_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $tamanan_p_tek = isset($tamanan_p_tek->nama)  ? $tamanan_p_tek->nama : ''  ?>
 								<td><?= $tamanan_p_tek ?></td>
@@ -1160,13 +1223,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $tenggarang = isset($tenggarang->nama)  ? $tenggarang->nama : ''  ?>
 								<td><?= $tenggarang ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $tenggarang_p_adm = isset($tenggarang_p_adm->nama)  ? $tenggarang_p_adm->nama : ''  ?>
 								<td><?= $tenggarang_p_adm ?></td>
@@ -1179,8 +1242,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($tenggarang_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $tenggarang_s_admPm = isset($tenggarang_s_admPm->nama)  ? $tenggarang_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $tenggarang_p_tek = isset($tenggarang_p_tek->nama)  ? $tenggarang_p_tek->nama : ''  ?>
 								<td><?= $tenggarang_p_tek ?></td>
@@ -1214,13 +1285,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $tamankrocok = isset($tamankrocok->nama)  ? $tamankrocok->nama : ''  ?>
 								<td><?= $tamankrocok ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $tamankrocok_p_adm = isset($tamankrocok_p_adm->nama)  ? $tamankrocok_p_adm->nama : ''  ?>
 								<td><?= $tamankrocok_p_adm ?></td>
@@ -1233,8 +1304,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($tamankrocok_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $tamankrocok_s_admPm = isset($tamankrocok_s_admPm->nama)  ? $tamankrocok_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $tamankrocok_p_tek = isset($tamankrocok_p_tek->nama)  ? $tamankrocok_p_tek->nama : ''  ?>
 								<td><?= $tamankrocok_p_tek ?></td>
@@ -1268,13 +1347,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $wonosari = isset($wonosari->nama)  ? $wonosari->nama : ''  ?>
 								<td><?= $wonosari ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $wonosari_p_adm = isset($wonosari_p_adm->nama)  ? $wonosari_p_adm->nama : ''  ?>
 								<td><?= $wonosari_p_adm ?></td>
@@ -1287,8 +1366,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($wonosari_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $wonosari_s_admPm = isset($wonosari_s_admPm->nama)  ? $wonosari_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $wonosari_p_tek = isset($wonosari_p_tek->nama)  ? $wonosari_p_tek->nama : ''  ?>
 								<td><?= $wonosari_p_tek ?></td>
@@ -1322,13 +1409,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>KA UPK</td>
+								<td class="fw-bold">KA UPK</td>
 								<td> : </td>
 								<?php $suko2 = isset($suko2->nama)  ? $suko2->nama : ''  ?>
 								<td><?= $suko2 ?></td>
 							</tr>
 							<tr>
-								<td>Pelaksana Administrasi</td>
+								<td class="fw-bold">Pelaksana Administrasi</td>
 								<td> : </td>
 								<?php $suko2_p_adm = isset($suko2_p_adm->nama)  ? $suko2_p_adm->nama : ''  ?>
 								<td><?= $suko2_p_adm ?></td>
@@ -1341,8 +1428,16 @@
 									<td><?= $row->nama ?></td>
 								</tr>
 							<?php endforeach;  ?>
+							<?php foreach ($suko2_s_admPm as $row) : ?>
+								<tr>
+									<td>Staf Administrasi Pembaca Meter</td>
+									<td> : </td>
+									<?php $suko2_s_admPm = isset($suko2_s_admPm->nama)  ? $suko2_s_admPm->nama : ''  ?>
+									<td><?= $row->nama ?></td>
+								</tr>
+							<?php endforeach;  ?>
 							<tr>
-								<td>Pelaksana Teknik</td>
+								<td class="fw-bold">Pelaksana Teknik</td>
 								<td> : </td>
 								<?php $suko2_p_tek = isset($suko2_p_tek->nama)  ? $suko2_p_tek->nama : ''  ?>
 								<td><?= $suko2_p_tek ?></td>
@@ -1376,13 +1471,13 @@
 					<table class="table">
 						<tbody>
 							<tr>
-								<td>Manager</td>
+								<td class="fw-bold">Manager</td>
 								<td> : </td>
 								<?php $amdk = isset($amdk->nama)  ? $amdk->nama : ''  ?>
 								<td><?= $amdk ?></td>
 							</tr>
 							<tr>
-								<td>Quality Control</td>
+								<td class="fw-bold">Quality Control</td>
 								<td> : </td>
 								<?php $amdk_qc = isset($amdk_qc->nama)  ? $amdk_qc->nama : ''  ?>
 								<td><?= $amdk_qc ?></td>
@@ -1396,7 +1491,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kabag Produksi</td>
+								<td class="fw-bold">Kabag Produksi</td>
 								<td> : </td>
 								<?php $amdk_pro = isset($amdk_pro->nama)  ? $amdk_pro->nama : ''  ?>
 								<td><?= $amdk_pro ?></td>
@@ -1410,7 +1505,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kabag Administrasi dan Keu</td>
+								<td class="fw-bold">Kabag Administrasi dan Keu</td>
 								<td> : </td>
 								<?php $amdk_adm = isset($amdk_adm->nama)  ? $amdk_adm->nama : ''  ?>
 								<td><?= $amdk_adm ?></td>
@@ -1424,7 +1519,7 @@
 								</tr>
 							<?php endforeach;  ?>
 							<tr>
-								<td>Kabag Pemasaran</td>
+								<td class="fw-bold">Kabag Pemasaran</td>
 								<td> : </td>
 								<?php $amdk_pasar = isset($amdk_pasar->nama)  ? $amdk_pasar->nama : ''  ?>
 								<td><?= $amdk_pasar ?></td>
