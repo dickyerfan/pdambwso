@@ -27,7 +27,11 @@
                             <a class="nav-link" href="<?= base_url('karyawan/karyawan_purna') ?>" style="font-size: 0.8rem;">Karyawan Purna</a>
                         </nav>
                     </div>
-                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataPekerjaan" aria-expanded="false" aria-controls="dataPekerjaan">
+                    <a class="nav-link" href="<?= base_url('pekerjaan/pekerjaan') ?>">
+                        <div class="sb-nav-link-icon"><i class="fas fa-briefcase fa-fw"></i></div>
+                        <div style="font-size: 0.8rem;"> Data Pekerjaan</div>
+                    </a>
+                    <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataPekerjaan" aria-expanded="false" aria-controls="dataPekerjaan">
                         <div class="sb-nav-link-icon"><i class="fas fa-briefcase fa-fw"></i></div>
                         <div style="font-size: 0.8rem;"> Data Pekerjaan</div>
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -39,7 +43,7 @@
                             <a class="nav-link" href="<?= base_url('pekerjaan/subag') ?>" style="font-size: 0.8rem;">Daftar Sub Bagian/UPK</a>
                             <a class="nav-link" href="<?= base_url('pekerjaan/jabatan') ?>" style="font-size: 0.8rem;">Daftar Jabatan</a>
                         </nav>
-                    </div>
+                    </div> -->
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#dataKendaraan" aria-expanded="false" aria-controls="dataKendaraan">
                         <div class="sb-nav-link-icon"><i class="fas fa-car fa-fw"></i></div>
                         <div style="font-size: 0.8rem;"> Data Kendaraan</div>

@@ -11,6 +11,10 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-file fa-fw"></i></div>
                         <div style="font-size: 0.8rem;"> Data Arsip/Dokumen</div>
                     </a>
+                    <a class="nav-link" href="<?= base_url('karyawan/karyawan_pengguna') ?>">
+                        <div class="sb-nav-link-icon"><i class="fas fa-users fa-fw"></i></div>
+                        <div style="font-size: 0.8rem;"> Data Karyawan</div>
+                    </a>
 
                     <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
                         <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt fa-fw"></i></div>

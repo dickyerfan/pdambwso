@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <a href="<?= base_url('kendaraan/type'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
+                    <a href="<?= base_url('kendaraan/type'); ?>"><button class="neumorphic-button float-end"><i class="fas fa-reply"></i> Kembali</button></a>
                 </div>
                 <div class="card-body">
                     <form class="user" action="<?= base_url('kendaraan/type/update') ?>" method="POST">
@@ -19,7 +19,7 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-primary btn-sm mt-1" name="tambah" type="submit"><i class="fas fa-edit"></i> Update Jabatan</button>
+                        <button class="neumorphic-button mt-1" name="tambah" type="submit"><i class="fas fa-edit"></i> Update Jabatan</button>
                     </form>
                 </div>
             </div>

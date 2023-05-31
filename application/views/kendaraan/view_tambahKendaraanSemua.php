@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <a href="<?= base_url('kendaraan/kendaraan_semua'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
+                    <a href="<?= base_url('kendaraan/kendaraan_semua'); ?>"><button class="neumorphic-button float-end"><i class="fas fa-reply"></i> Kembali</button></a>
                 </div>
 
 
@@ -118,7 +118,7 @@
 
 
                         </div>
-                        <button class="btn btn-primary btn-sm mt-1" name="tambah" type="submit"><i class="fas fa-save"></i> Simpan</button>
+                        <button class="neumorphic-button mt-1" name="tambah" type="submit"><i class="fas fa-save"></i> Simpan</button>
                     </form>
                 </div>
             </div>

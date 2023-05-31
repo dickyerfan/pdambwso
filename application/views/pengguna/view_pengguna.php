@@ -10,15 +10,15 @@
                 <div class="card-body text-center">
                     <div class="row d-flex justify-content-center">
                         <div class="col-md-2">
-                            <div class="card bg-primary text-light mb-4 shadow" style="width: 12rem;">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#direktur">DIREKTUR</div>
+                            <div class="mb-4" style="width: 12rem;">
+                                <div class="card-body text-center fw-bold boxBiru" data-bs-toggle="modal" data-bs-target="#direktur">DIREKTUR</div>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-2">
-                            <div class="card bg-danger text-light mb-4 shadow" style="width: 12rem;">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#spi">S P I</div>
+                            <div class="mb-4" style="width: 12rem;">
+                                <div class="card-body text-center fw-bold boxMerah" data-bs-toggle="modal" data-bs-target="#spi">S P I</div>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -33,36 +33,36 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-2">
-                            <div class="card bg-success text-light mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#langgan">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxHijau" data-bs-toggle="modal" data-bs-target="#langgan">
                                     Langganan
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-success text-light mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#umum">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxHijau" data-bs-toggle="modal" data-bs-target="#umum">
                                     U m u m
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-success text-light mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#keu">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxHijau" data-bs-toggle="modal" data-bs-target="#keu">
                                     Keuangan
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-success text-light mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#renc">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxHijau" data-bs-toggle="modal" data-bs-target="#renc">
                                     Perencanaan
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-success text-light mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#peml">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxHijau" data-bs-toggle="modal" data-bs-target="#peml">
                                     Pemeliharaan
                                 </div>
                             </div>
@@ -75,106 +75,106 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#bondowoso">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#bondowoso">
                                     Bondowoso
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#suko1">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#suko1">
                                     Sukosari 1
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#maesan">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#maesan">
                                     Maesan
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#tegalampel">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#tegalampel">
                                     Tegalampel
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#tapen">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#tapen">
                                     Tapen
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#prajekan">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#prajekan">
                                     Prajekan
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#tlogosari">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#tlogosari">
                                     Tlogosari
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#wringin">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#wringin">
                                     Wringin
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#curahdami">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#curahdami">
                                     Curahdami
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#tamanan">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#tamanan">
                                     Tamanan
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#tenggarang">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#tenggarang">
                                     Tenggarang
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#tamankrocok">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#tamankrocok">
                                     Tamankrocok
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#wonosari">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#wonosari">
                                     Wonosari
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#suko2">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#suko2">
                                     Sukosari 2
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="card bg-warning text-dark mb-4 shadow">
-                                <div class="card-body text-center fw-bold" data-bs-toggle="modal" data-bs-target="#amdk">
+                            <div class="mb-4">
+                                <div class="card-body text-center fw-bold boxKuning" data-bs-toggle="modal" data-bs-target="#amdk">
                                     A M D K
                                 </div>
                             </div>

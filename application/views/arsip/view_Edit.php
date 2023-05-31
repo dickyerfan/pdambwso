@@ -8,7 +8,8 @@
                             <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
                         </div>
                         <div class="col-3">
-                            <a href="<?= base_url('arsip') ?>" class="btn btn-primary btn-sm title float-end"><i class="fas fa-reply"></i> Kembali</a>
+                            <!-- <a href="<?= base_url('arsip') ?>" class="btn btn-primary btn-sm title float-end"><i class="fas fa-reply"></i> Kembali</a> -->
+                            <a href="<?= base_url('arsip'); ?>"><button class="neumorphic-button float-end"><i class="fas fa-reply"></i> Kembali</button></a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +64,7 @@
                                 <div class="row justify-content-center mb-1">
                                     <div class="col-md-8">
                                         <div class="d-grid gap-2">
-                                            <button type="submit" name="add_post" id="tombol_pilih" class="btn btn-block btn-primary">Update</button>
+                                            <button type="submit" name="add_post" id="tombol_pilih" class="neumorphic-button">Update</button>
                                         </div>
                                     </div>
                                 </div>

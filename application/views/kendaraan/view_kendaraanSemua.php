@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <a href="<?= base_url('kendaraan/kendaraan_semua/tambah'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-plus"></i> Tambah Kendaraan</button></a>
+                    <a href="<?= base_url('kendaraan/kendaraan_semua/tambah'); ?>"><button class="neumorphic-button float-end"><i class="fas fa-plus"></i> Tambah Kendaraan</button></a>
                 </div>
                 <div class="p-2">
                     <?= $this->session->flashdata('info'); ?>

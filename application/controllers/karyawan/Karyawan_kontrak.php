@@ -17,10 +17,18 @@ class Karyawan_kontrak extends CI_Controller
     {
         $data['title'] = 'Daftar Karyawan Kontrak';
         $data['karyawanTetap'] = $this->model_karyawan->getKaryawanKontrak();
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/navbar');
-        $this->load->view('templates/sidebar');
-        $this->load->view('karyawan/view_karyawanKontrak', $data);
-        $this->load->view('templates/footer');
+        if ($this->session->userdata('level') == 'Admin') {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/navbar');
+            $this->load->view('templates/sidebar');
+            $this->load->view('karyawan/view_karyawanKontrak', $data);
+            $this->load->view('templates/footer');
+        } else {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/navbar');
+            $this->load->view('templates/sidebar_pengguna');
+            $this->load->view('karyawan/view_karyawanKontrak', $data);
+            $this->load->view('templates/footer');
+        }
     }
 }

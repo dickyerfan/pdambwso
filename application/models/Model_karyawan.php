@@ -16,6 +16,14 @@ class Model_karyawan extends CI_Model
         // $this->db->where('aktif', '1');
         return $this->db->get()->result();
     }
+    public function getAllPengguna()
+    {
+        $this->db->select('id, agama, nama, nik, alamat, no_hp, jenkel, tmp_lahir, tgl_lahir');
+        $this->db->from('karyawan');
+        $this->db->where('aktif', '1');
+        return $this->db->get()->result();
+    }
+
     public function getdetail($id)
     {
         $this->db->select('*, bagian.nama_bagian,subag.nama_subag, jabatan.nama_jabatan');

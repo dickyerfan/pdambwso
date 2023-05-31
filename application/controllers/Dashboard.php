@@ -20,14 +20,6 @@ class Dashboard extends CI_Controller
 		}
 		$data['title'] = 'Dashboard';
 
-		// $this->db->select('*');
-		// $this->db->from('karyawan');
-		// $this->db->join('jabatan', 'karyawan.id_jabatan = jabatan.id_jabatan');
-		// $this->db->join('bagian', 'karyawan.id_bagian = bagian.id_bagian');
-		// $this->db->where('bagian.nama_bagian', 'Langganan');
-		// $this->db->where('jabatan.nama_jabatan', 'Kabag');
-		// $data['lang'] = $this->db->get()->row();
-
 		$data['direktur'] = $this->db->query("SELECT * FROM karyawan LEFT JOIN jabatan ON karyawan.id_jabatan = jabatan.id_jabatan WHERE jabatan.nama_jabatan = 'Direktur' AND aktif = '1' ")->row();
 
 		//SPI

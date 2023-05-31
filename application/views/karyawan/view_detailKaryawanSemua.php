@@ -4,7 +4,7 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <a href="<?= base_url('karyawan/karyawan_dashboard'); ?>"><button class="btn btn-primary btn-sm float-end"><i class="fas fa-reply"></i> Kembali</button></a>
+                    <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('karyawan/karyawan_dashboard') : base_url('karyawan/karyawan_pengguna'); ?>"><button class="neumorphic-button float-end"><i class="fas fa-reply"></i> Kembali</button></a>
                 </div>
                 <div class="p-2">
                     <?= $this->session->flashdata('info'); ?>
@@ -42,6 +42,57 @@
                                                 <td>Status</td>
                                                 <td> : </td>
                                                 <td class="fw-bold"><?= $karyawan->status_pegawai ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Alamat</td>
+                                                <td> : </td>
+                                                <td class="fw-bold"><?= $karyawan->alamat ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Agama</td>
+                                                <td> : </td>
+                                                <td class="fw-bold"><?= $karyawan->agama ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>No HP</td>
+                                                <td> : </td>
+                                                <td class="fw-bold"><?= $karyawan->no_hp ?></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <?php
+                                $tgl_lahir = new DateTime($karyawan->tgl_lahir);
+                                $tgl_skrng = new DateTime();
+                                $umur = $tgl_skrng->diff($tgl_lahir)->y;
+
+                                $tanggalMasuk = ubahNamaBulan($karyawan->tgl_masuk);
+                                $tanggalLahir = ubahNamaBulan($karyawan->tgl_lahir);
+                                ?>
+                                <div class="col-md-6">
+                                    <table class="table">
+                                        <tbody>
+
+                                            <tr>
+                                                <td>Jenis Kelamin</td>
+                                                <td> : </td>
+                                                <td class="fw-bold"><?= $karyawan->jenkel ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tempat lahir</td>
+                                                <td> : </td>
+                                                <td class="fw-bold"><?= $karyawan->tmp_lahir ?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tanggal Lahir</td>
+                                                <td> : </td>
+                                                <td class="fw-bold"><?= $tanggalLahir . ' / ' . $umur ?> Tahun</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tanggal Masuk</td>
+                                                <td> : </td>
+                                                <td class="fw-bold"><?= $karyawan->tgl_masuk == '0000-00-00' ? '-' : $tanggalMasuk  ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Masa Kerja</td>
@@ -92,57 +143,8 @@
                                                 <td> : </td>
                                                 <td class="fw-bold"><?= $sisa ?> Tahun lagi</td>
                                             </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <?php
-                                $tgl_lahir = new DateTime($karyawan->tgl_lahir);
-                                $tgl_skrng = new DateTime();
-                                $umur = $tgl_skrng->diff($tgl_lahir)->y;
-
-                                $tanggalMasuk = ubahNamaBulan($karyawan->tgl_masuk);
-                                $tanggalLahir = ubahNamaBulan($karyawan->tgl_lahir);
-                                ?>
-                                <div class="col-md-6">
-                                    <table class="table">
-                                        <tbody>
                                             <tr>
-                                                <td>Alamat</td>
-                                                <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->alamat ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Agama</td>
-                                                <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->agama ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>No HP</td>
-                                                <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->no_hp ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Jenis Kelamin</td>
-                                                <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->jenkel ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tempat lahir</td>
-                                                <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->tmp_lahir ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tanggal Lahir</td>
-                                                <td> : </td>
-                                                <td class="fw-bold"><?= $tanggalLahir . ' / ' . $umur ?> Tahun</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tanggal Masuk</td>
-                                                <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->tgl_masuk == '0000-00-00' ? '-' : $tanggalMasuk  ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Aktif</td>
+                                                <td>Status Aktif</td>
                                                 <td> : </td>
                                                 <td class="fw-bold"><?= $karyawan->aktif == 1 ? 'Karyawan Aktif' : 'Karyawan Purna' ?></td>
                                             </tr>
