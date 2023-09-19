@@ -13,7 +13,7 @@ class Model_karyawan extends CI_Model
         // $this->db->order_by('nama', 'ASC');
         // $this->db->order_by('bagian.nama_bagian', 'ASC');
         // $this->db->order_by('subag.nama_subag', 'ASC');
-        // $this->db->where('aktif', '1');
+        $this->db->where('aktif', '1');
         return $this->db->get()->result();
     }
     public function getAllPengguna()

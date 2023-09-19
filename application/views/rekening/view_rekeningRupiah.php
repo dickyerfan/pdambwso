@@ -350,15 +350,13 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid px-1 mt-3">
-                <div class="card">
-                    <div class="card-header card-outline card-primary shadow">
-                        <h5 class="card-title text-center">Grafik Pendapatan Konsolidasi <?= $tahun ?></h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="chart">
-                            <canvas id="allRupiah" width="100%" height="40"></canvas>
-                        </div>
+            <div class="card">
+                <div class="card-header card-outline card-primary shadow">
+                    <h5 class="card-title text-center">Grafik Pendapatan Konsolidasi <?= $tahun ?></h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <canvas id="allRupiah" width="100%" height="40"></canvas>
                     </div>
                 </div>
             </div>
@@ -368,20 +366,30 @@
                 </div>
                 <div class="card-body">
                     <div class="chart">
-                        <canvas id="bwsRupiah" width="100%" height="30"></canvas>
+                        <canvas id="1Rupiah" width="100%" height="30"></canvas>
                     </div>
                 </div>
             </div>
-            <!-- <div class="card">
+            <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <h5 class="card-title">Sukosari 1</h5>
                 </div>
                 <div class="card-body">
                     <div class="chart">
-                        <canvas id="suko1" width="100%" height="30"></canvas>
+                        <canvas id="2Rupiah" width="100%" height="30"></canvas>
                     </div>
                 </div>
-            </div> -->
+            </div>
+            <div class="card">
+                <div class="card-header card-outline card-primary shadow">
+                    <h5 class="card-title">Maesan</h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart">
+                        <canvas id="3Rupiah" width="100%" height="30"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>

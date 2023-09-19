@@ -118,38 +118,82 @@ class Rekening_rupiah extends CI_Controller
             $totalDes = $row->totalDes;
         }
 
-        $this->db->select('sum(rupiah) as bonJan');
-        $this->db->from('data_rekening');
-        $this->db->where('bln', 1);
-        $this->db->where('thn', $tahun);
-        $this->db->where('id_upk', 1);
-        $bon = $this->db->get()->result();
-        foreach ($bon as $row) {
-            $bonJan = $row->bonJan;
-        }
+        // $this->db->select('sum(rupiah) as bonJan');
+        // $this->db->from('data_rekening');
+        // $this->db->where('bln', 1);
+        // $this->db->where('thn', $tahun);
+        // $this->db->where('id_upk', 1);
+        // $bon = $this->db->get()->result();
+        // foreach ($bon as $row) {
+        //     $bonJan = $row->bonJan;
+        // }
 
-        $this->db->select('sum(rupiah) as bonFeb');
-        $this->db->from('data_rekening');
-        $this->db->where('bln', 2);
-        $this->db->where('thn', $tahun);
-        $this->db->where('id_upk', 1);
-        $bon = $this->db->get()->result();
-        foreach ($bon as $row) {
-            $bonFeb = $row->bonFeb;
-        }
-        $this->db->select('sum(rupiah) as bonMar');
-        $this->db->from('data_rekening');
-        $this->db->where('bln', 3);
-        $this->db->where('thn', $tahun);
-        $this->db->where('id_upk', 1);
-        $bon = $this->db->get()->result();
-        foreach ($bon as $row) {
-            $bonMar = $row->bonMar;
+        // $this->db->select('sum(rupiah) as bonFeb');
+        // $this->db->from('data_rekening');
+        // $this->db->where('bln', 2);
+        // $this->db->where('thn', $tahun);
+        // $this->db->where('id_upk', 1);
+        // $bon = $this->db->get()->result();
+        // foreach ($bon as $row) {
+        //     $bonFeb = $row->bonFeb;
+        // }
+        // $this->db->select('sum(rupiah) as bonMar');
+        // $this->db->from('data_rekening');
+        // $this->db->where('bln', 3);
+        // $this->db->where('thn', $tahun);
+        // $this->db->where('id_upk', 1);
+        // $bon = $this->db->get()->result();
+        // foreach ($bon as $row) {
+        //     $bonMar = $row->bonMar;
+        // }
+
+        $months = array(
+            1 => 'Jan', 2 => 'Feb', 3 => 'Mar', 4 => 'Apr',
+            5 => 'May', 6 => 'Jun', 7 => 'Jul', 8 => 'Aug',
+            9 => 'Sep', 10 => 'Oct', 11 => 'Nov', 12 => 'Dec'
+        );
+
+        for ($i = 1; $i <= 12; $i++) {
+            $monthName = $months[$i];
+
+            $this->db->select("SUM(rupiah) as bon$monthName");
+            $this->db->from('data_rekening');
+            $this->db->where('bln', $i);
+            $this->db->where('thn', $tahun);
+            $this->db->where('id_upk', 1);
+            $bon = $this->db->get()->result();
+
+            foreach ($bon as $row) {
+                $bonAmount[$i] = $row->{"bon$monthName"};
+            }
+
+            $this->db->select("SUM(rupiah) as suko1$monthName");
+            $this->db->from('data_rekening');
+            $this->db->where('bln', $i);
+            $this->db->where('thn', $tahun);
+            $this->db->where('id_upk', 2);
+            $suko1 = $this->db->get()->result();
+
+            foreach ($suko1 as $row) {
+                $suko1Amount[$i] = $row->{"suko1$monthName"};
+            }
+
+            $this->db->select("SUM(rupiah) as maesan$monthName");
+            $this->db->from('data_rekening');
+            $this->db->where('bln', $i);
+            $this->db->where('thn', $tahun);
+            $this->db->where('id_upk', 3);
+            $maesan = $this->db->get()->result();
+
+            foreach ($maesan as $row) {
+                $maesanAmount[$i] = $row->{"maesan$monthName"};
+            }
         }
 
 
         $data['title'] = 'Rekap Jumlah Pendapatan (Rupiah)';
         $data['upk'] = $this->model_rekRupiah->getUpk();
+
         $data['jan'] = $this->model_rekRupiah->getJan($tahun);
         $data['feb'] = $this->model_rekRupiah->getFeb($tahun);
         $data['mar'] = $this->model_rekRupiah->getMar($tahun);
@@ -162,6 +206,7 @@ class Rekening_rupiah extends CI_Controller
         $data['okt'] = $this->model_rekRupiah->getOkt($tahun);
         $data['nov'] = $this->model_rekRupiah->getNov($tahun);
         $data['des'] = $this->model_rekRupiah->getDes($tahun);
+
         $data['totalJan'] = $totalJan;
         $data['totalFeb'] = $totalFeb;
         $data['totalMar'] = $totalMar;
@@ -174,9 +219,45 @@ class Rekening_rupiah extends CI_Controller
         $data['totalOkt'] = $totalOkt;
         $data['totalNov'] = $totalNov;
         $data['totalDes'] = $totalDes;
-        $data['bonJan'] = $bonJan;
-        $data['bonFeb'] = $bonFeb;
-        $data['bonMar'] = $bonMar;
+
+        // $data['bonJan'] = $bonAmount[1];
+        // $data['bonFeb'] = $bonAmount[2];
+        // $data['bonMar'] = $bonAmount[3];
+        // $data['bonApr'] = $bonAmount[4];
+        // $data['bonMei'] = $bonAmount[5];
+        // $data['bonJun'] = $bonAmount[6];
+        // $data['bonJul'] = $bonAmount[7];
+        // $data['bonAgs'] = $bonAmount[8];
+        // $data['bonSep'] = $bonAmount[9];
+        // $data['bonOkt'] = $bonAmount[10];
+        // $data['bonNov'] = $bonAmount[11];
+        // $data['bonDes'] = $bonAmount[12];
+
+        // $data['suko1Jan'] = $suko1Amount[1];
+        // $data['suko1Feb'] = $suko1Amount[2];
+        // $data['suko1Mar'] = $suko1Amount[3];
+        // $data['suko1Apr'] = $suko1Amount[4];
+        // $data['suko1Mei'] = $suko1Amount[5];
+        // $data['suko1Jun'] = $suko1Amount[6];
+        // $data['suko1Jul'] = $suko1Amount[7];
+        // $data['suko1Ags'] = $suko1Amount[8];
+        // $data['suko1Sep'] = $suko1Amount[9];
+        // $data['suko1Okt'] = $suko1Amount[10];
+        // $data['suko1Nov'] = $suko1Amount[11];
+        // $data['suko1Des'] = $suko1Amount[12];
+
+        $months = array(
+            1 => 'Jan', 2 => 'Feb', 3 => 'Mar', 4 => 'Apr',
+            5 => 'Mei', 6 => 'Jun', 7 => 'Jul', 8 => 'Ags',
+            9 => 'Sep', 10 => 'Okt', 11 => 'Nov', 12 => 'Des'
+        );
+
+        foreach ($months as $monthNumber => $monthName) {
+            $data["bon$monthName"] = $bonAmount[$monthNumber];
+            $data["suko1$monthName"] = $suko1Amount[$monthNumber];
+            $data["maesan$monthName"] = $maesanAmount[$monthNumber];
+        }
+
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');

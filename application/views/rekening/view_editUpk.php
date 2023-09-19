@@ -19,7 +19,7 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-primary btn-sm float-left mt-1" name="tambah" type="submit"><i class="fas fa-edit"></i> Update Bagian</button>
+                        <button class="btn btn-primary btn-sm float-left mt-1" name="tambah" type="submit"><i class="fas fa-edit"></i> Update U P K</button>
                     </form>
                 </div>
             </div>

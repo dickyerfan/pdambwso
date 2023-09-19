@@ -152,4 +152,32 @@ class Model_upk extends CI_Model
         $this->db->from('nama_upk');
         return $this->db->get()->result();
     }
+
+    public function tambahData()
+    {
+        $data = [
+            "nama_upk" => $this->input->post('nama_upk', true),
+        ];
+        $this->db->insert('nama_upk', $data);
+    }
+
+    public function getIdUpk($id)
+    {
+        return $this->db->get_where('nama_upk', ['id_upk' => $id])->row();
+    }
+
+    public function updateData()
+    {
+        $data = [
+            "nama_upk" => $this->input->post('nama_upk', true),
+        ];
+        $this->db->where('id_upk', $this->input->post('id_upk'));
+        $this->db->update('nama_upk', $data);
+    }
+
+    public function hapusData($id)
+    {
+        $this->db->where('id_upk', $id);
+        $this->db->delete('nama_upk');
+    }
 }

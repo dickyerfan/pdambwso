@@ -8,18 +8,34 @@
                     <h4 class="card-title"><?= strtoupper($title) ?></h4>
                 </div>
                 <div class="card-body">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-start">
                         <div class="col-md-6">
-                            <div class="card bg-danger shadow">
-                                <div class="card-body">
-                                    <h4 class="card-title">Back Up</h4>
-                                    <a href="<?= base_url('backup/backup') ?>" class="btn btn-primary"><i class="fas fa-download"></i> Backup database</a><br>
-                                    <div class="text-white fst-italic badge">Klik Backup untuk Backup database</div>
+                            <div class="card mb-3 shadow border-0" style="background: linear-gradient(
+                                            45deg,
+                                            rgba(29, 236, 197, 0.7),
+                                            rgba(91, 14, 214, 0.9) 100%
+                                            )">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="<?= base_url('assets/img/komputer.jpg') ?>" class="img-fluid" alt="database" style="height: 200px; width: 500px; ">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body text-light">
+                                            <h5 class="card-title">BACK UP</h5>
+                                            <p class="card-text"><small class="text-light">Rutin lakukan backup database minimal 1 bulan sekali</small></p>
+                                            <a href="<?= base_url('backup/backup') ?>" class="btn btn-dark border-0" style="background: linear-gradient(
+                                            45deg,
+                                            rgba(29, 236, 197, 0.7),
+                                            rgba(91, 14, 214, 0.9) 100%
+                                            )"><i class="fas fa-download"></i> Backup database</a><br>
+                                            <p class="card-text"><small class="text-light">Klik untuk melakukan Backup database</small></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <div class="card bg-primary shadow">
                                 <div class="card-body">
                                     <h4 class="card-title">Restore</h4>
@@ -30,7 +46,7 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

@@ -13,6 +13,7 @@ class Model_rekRupiah extends CI_Model
         $this->db->group_by('data_rekening.id_upk');
         return $this->db->get()->result();
     }
+
     public function getJan($tahun)
     {
         $this->db->select('*');

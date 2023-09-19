@@ -20,7 +20,7 @@ class Merk extends CI_Controller
     $this->load->view('templates/header', $data);
     $this->load->view('templates/navbar');
     $this->load->view('templates/sidebar');
-    $this->load->view('kendaraan/view_Merk', $data);
+    $this->load->view('kendaraan/view_merk', $data);
     $this->load->view('templates/footer');
   }
 

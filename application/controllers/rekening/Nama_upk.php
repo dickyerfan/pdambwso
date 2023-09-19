@@ -6,7 +6,7 @@ class Nama_upk extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_upk');
+        $this->load->model('Model_upk');
         $this->load->library('form_validation');
         if (!$this->session->userdata('nama_pengguna')) {
             redirect('auth');
@@ -16,7 +16,7 @@ class Nama_upk extends CI_Controller
     public function index()
     {
         $data['title'] = 'Daftar U P K';
-        $data['upk'] = $this->model_upk->getUpk();
+        $data['upk'] = $this->Model_upk->getUpk();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
         $this->load->view('templates/sidebar');
@@ -46,15 +46,14 @@ class Nama_upk extends CI_Controller
                   </button>
                 </div>'
             );
-
-            $this->model_upk->tambahData();
+            $this->Model_upk->tambahData();
             redirect('rekening/nama_upk');
         }
     }
 
     public function edit($id)
     {
-        $data['upk'] = $this->model_upk->getIdUpk($id);
+        $data['upk'] = $this->Model_upk->getIdUpk($id);
         $data['title'] = 'Form Edit UPK';
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
@@ -65,7 +64,7 @@ class Nama_upk extends CI_Controller
 
     public function update()
     {
-        $this->model_upk->updateData();
+        $this->Model_upk->updateData();
         if ($this->db->affected_rows() <= 0) {
             $this->session->set_flashdata(
                 'info',
@@ -91,7 +90,7 @@ class Nama_upk extends CI_Controller
 
     public function hapus($id)
     {
-        $this->model_upk->hapusData($id);
+        $this->Model_upk->hapusData($id);
         $this->session->set_flashdata('info', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
           <strong>Sukses,</strong> data UPK Berhasil di hapus
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">

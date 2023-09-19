@@ -15,7 +15,7 @@ class Backup extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Backup dan Restore';
+        $data['title'] = 'Backup Data';
         $this->load->view('templates/header', $data);
         $this->load->view('templates/navbar');
         $this->load->view('templates/sidebar');

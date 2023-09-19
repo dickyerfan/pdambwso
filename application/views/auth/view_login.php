@@ -9,6 +9,8 @@
     <meta name="author" content="" />
     <title>App | <?= $title ?></title>
 
+    <link href="<?= base_url() ?>assets/img/logo.png" rel="icon">
+
     <link href="<?= base_url() ?>assets/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 
