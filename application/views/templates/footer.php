@@ -278,8 +278,8 @@
                 }],
                 yAxes: [{
                     ticks: {
-                        min: 19100,
-                        max: 19800,
+                        min: 18500,
+                        max: 19600,
                         maxTicksLimit: 20
                     },
                     gridLines: {
