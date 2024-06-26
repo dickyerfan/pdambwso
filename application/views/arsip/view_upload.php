@@ -51,28 +51,28 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group mb-1">
+                                        <!-- <div class="form-group mb-1">
                                             <label for="" class="form-label">Tanggal Upload :</label>
                                             <input type="date" name="tgl_upload" class="form-control" value="<?= set_value('tgl_upload'); ?>">
                                             <small class="form-text text-danger pl-3"><?= form_error('tgl_upload'); ?></small>
-                                        </div>
+                                        </div> -->
                                         <div class="form-group mb-1">
                                             <label for="" class="form-label">Tentang :</label>
                                             <!-- <input type="text" name="tentang" class="form-control" required> -->
-                                            <textarea name="tentang" id="" rows="4" class="form-control"><?= set_value('tentang'); ?></textarea>
+                                            <textarea name="tentang" id="" rows="5" class="form-control"><?= set_value('tentang'); ?></textarea>
                                             <small class="form-text text-danger pl-3"><?= form_error('tentang'); ?></small>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="" class="form-label">Keterangan :</label>
                                             <!-- <input type="text" name="keterangan" class="form-control"> -->
-                                            <textarea name="keterangan" id="" rows="4" class="form-control"></textarea>
+                                            <textarea name="keterangan" id="" rows="5" class="form-control"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center mb-1">
-                                    <div class="col-md-8">
+                                    <div class="col-md-4">
                                         <div class="d-grid gap-2">
-                                            <button type="submit" name="add_post" id="tombol_pilih" class="neumorphic-button">Upload</button>
+                                            <button type="submit" name="add_post" id="tombol_pilih" class="neumorphic-button">Upload File</button>
                                         </div>
                                     </div>
                                 </div>

@@ -44,10 +44,10 @@
                                             <label for="" class="form-label">Tanggal Dokumen :</label>
                                             <input type="date" name="tgl_dokumen" class="form-control" value="<?= $arsip->tgl_dokumen; ?>" required>
                                         </div>
-                                        <div class="form-group mb-1">
+                                        <!-- <div class="form-group mb-1">
                                             <label for="" class="form-label">Tanggal Upload :</label>
                                             <input type="date" name="tgl_upload" class="form-control" value="<?= $arsip->tgl_upload; ?>" required>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="col-md-6">
 

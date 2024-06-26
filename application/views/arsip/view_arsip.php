@@ -97,8 +97,8 @@
             <div class="card">
                 <div class="card-header card-outline card-primary shadow">
                     <a class="fw-bold text-dark" style="text-decoration:none ;"><?= strtoupper($title) ?></a>
-                    <!-- <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/tambah') : '#'; ?>"><button class="btn btn-primary btn-sm float-end" data-bs-toggle="tooltip" title="Hanya Admin yang bisa upload data" style="background: #f0f0f0; border: none; border-radius: 20px; box-shadow: 2px 2px 2px #eee, inset 8px 8px 8px #ffffff, inset -8px -8px 8px #cbced1; color: #333;font-size: 1rem; padding: .3rem .7rem; font-size:.7rem" onMouseOver="this.style.backgroundColor='#cbced1'" onMouseOut="this.style.backgroundColor='#ffffff'"><i class="fas fa-plus"></i> Upload File</button></a> -->
-                    <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/tambah') : '#'; ?>"><button class="float-end neumorphic-button" data-bs-toggle="tooltip" title="Hanya Admin yang bisa upload data"><span><i class="fas fa-plus"></i> Upload File</span></button></a>
+                    <!-- <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/tambah') : '#'; ?>"><button class="float-end neumorphic-button" data-bs-toggle="tooltip" title="Hanya Admin yang bisa upload data"><span><i class="fas fa-plus"></i> Upload File</span></button></a> -->
+                    <a href="<?= base_url('arsip/tambah') ?>"><button class="float-end neumorphic-button"><span><i class="fas fa-plus"></i> Upload File</span></button></a>
                 </div>
                 <div class="p-2">
                     <?= $this->session->flashdata('info'); ?>

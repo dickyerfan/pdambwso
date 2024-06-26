@@ -15,8 +15,6 @@ class Arsip extends CI_Controller
 
     public function index()
     {
-        $data['kartotal'] = $this->db->get_where('karyawan', ['aktif' => '1'])->num_rows();
-
         $data['sk'] = $this->db->get_where('arsip', [
             'jenis' => 'Surat Keputusan',
         ])->num_rows();
@@ -58,7 +56,7 @@ class Arsip extends CI_Controller
         $this->form_validation->set_rules('nama_dokumen', 'Nama Dokumen', 'required|trim|is_unique[arsip.nama_dokumen]');
         // $this->form_validation->set_rules('nama_file', 'Nama File', 'required|trim');
         $this->form_validation->set_rules('tentang', 'Tentang', 'required|trim');
-        $this->form_validation->set_rules('tgl_upload', 'Tanggal Upload', 'required|trim');
+        // $this->form_validation->set_rules('tgl_upload', 'Tanggal Upload', 'required|trim');
         $this->form_validation->set_message('required', '%s harus di isi');
         $this->form_validation->set_message('is_unique', '%s sudah terdaftar');
         $this->form_validation->set_message('min_length', '%s Minimal 2 digit');
@@ -93,7 +91,8 @@ class Arsip extends CI_Controller
                 $data['tahun'] = $this->input->post('tahun');
                 // $data['tentang'] = $this->input->post('tentang');
                 $data['tentang'] = ucwords(strtolower($this->input->post('tentang')));
-                $data['tgl_upload'] = $this->input->post('tgl_upload');
+                // $data['tgl_upload'] = $this->input->post('tgl_upload');
+                $data['tgl_upload'] = date('Y-m-d');
                 $data['tgl_dokumen'] = $this->input->post('tgl_dokumen');
                 $data['keterangan'] = $this->input->post('keterangan');
                 $this->db->insert('arsip', $data);
@@ -109,43 +108,6 @@ class Arsip extends CI_Controller
             }
         }
     }
-
-    // public function tambah()
-    // {
-    //     $config['upload_path']          = './uploads/';
-    //     $config['allowed_types']        = 'pdf|doc|docx|xls|xlsx';
-    //     $config['max_size']             = 20000;
-    //     $this->load->library('upload', $config);
-    //     if (!$this->upload->do_upload('nama_file')) {
-    //         $this->session->set_flashdata('error', $this->upload->display_errors());
-    //         $data['title'] = 'Upload Data';
-    //         $this->load->view('templates/header', $data);
-    //         $this->load->view('templates/navbar');
-    //         $this->load->view('templates/sidebar');
-    //         $this->load->view('arsip/view_upload', $data);
-    //         $this->load->view('templates/footer');
-    //     } else {
-    //         $data['nama_file'] = $this->upload->data("file_name");
-    //         $data['nama_dokumen'] = $this->input->post('nama_dokumen');
-    //         $data['jenis'] = $this->input->post('jenis');
-    //         $data['tahun'] = $this->input->post('tahun');
-    //         $data['tentang'] = $this->input->post('tentang');
-    //         $data['tgl_upload'] = $this->input->post('tgl_upload');
-    //         $data['tgl_dokumen'] = $this->input->post('tgl_dokumen');
-    //         $data['keterangan'] = $this->input->post('keterangan');
-    //         $this->db->insert('arsip', $data);
-    //         $this->session->set_flashdata(
-    //             'info',
-    //             '<div class="alert alert-primary alert-dismissible fade show" role="alert">
-    //               <strong>Sukses,</strong> Data berhasil di tambahkan
-    //               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-    //               </button>
-    //             </div>'
-    //         );
-    //         redirect('arsip');
-    //     }
-    // }
-
 
     public function edit($id_arsip)
     {
@@ -165,7 +127,7 @@ class Arsip extends CI_Controller
             'jenis' => $this->input->post('jenis'),
             'tahun' => $this->input->post('tahun'),
             'tentang' => $this->input->post('tentang'),
-            'tgl_upload' => $this->input->post('tgl_upload'),
+            // 'tgl_upload' => $this->input->post('tgl_upload'),
             'tgl_dokumen' => $this->input->post('tgl_dokumen'),
             'keterangan' => $this->input->post('keterangan')
         ];
