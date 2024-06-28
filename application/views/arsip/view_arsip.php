@@ -128,7 +128,8 @@
                                     <tr>
                                         <td class="text-center"><small><?= $no++ ?></small></td>
                                         <td class="text-center">
-                                            <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/edit/' . $row['id_arsip']) : '#' ?>"><i class=" fas fa-fw fa-edit" data-bs-toggle="tooltip" title="Klik untuk Edit Data"></i></a>
+                                            <a href="<?= base_url('arsip/edit/' . $row['id_arsip']);  ?>"><i class=" fas fa-fw fa-edit" data-bs-toggle="tooltip" title="Klik untuk Edit Data"></i></a>
+                                            <!-- <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/edit/' . $row['id_arsip']) : '#' ?>"><i class=" fas fa-fw fa-edit" data-bs-toggle="tooltip" title="Klik untuk Edit Data"></i></a> -->
                                             <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/hapus/' . $row['id_arsip']) : '#' ?>" class="tombolHapus"><i class="fas fa-fw fa-trash" style="color: red;" data-bs-toggle="tooltip" title="Klik untuk Hapus Data"></i></a>
                                             <a href="<?= base_url('arsip/detail/') ?><?= $row['id_arsip']; ?>"><i class="fas fa-fw fa-circle-info" style="color: black;" data-bs-toggle="tooltip" title="Klik untuk lihat Detail Data"></i></a>
                                             <a href="<?= base_url('arsip/download/') ?><?= $row['id_arsip']; ?>"> <i class="fas fa-download" style="text-decoration:none; color:green;" data-bs-toggle="tooltip" title="Klik untuk Download Data"></i></a>
