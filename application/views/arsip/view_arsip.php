@@ -128,21 +128,21 @@
                                     <tr>
                                         <td class="text-center"><small><?= $no++ ?></small></td>
                                         <td class="text-center">
-                                            <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/edit/' . $row->id_arsip) : '#' ?>"><i class=" fas fa-fw fa-edit" data-bs-toggle="tooltip" title="Klik untuk Edit Data"></i></a>
-                                            <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/hapus/' . $row->id_arsip) : '#' ?>" class="tombolHapus"><i class="fas fa-fw fa-trash" style="color: red;" data-bs-toggle="tooltip" title="Klik untuk Hapus Data"></i></a>
-                                            <a href="<?= base_url('arsip/detail/') ?><?= $row->id_arsip; ?>"><i class="fas fa-fw fa-circle-info" style="color: black;" data-bs-toggle="tooltip" title="Klik untuk lihat Detail Data"></i></a>
-                                            <a href="<?= base_url('arsip/download/') ?><?= $row->id_arsip; ?>"> <i class="fas fa-download" style="text-decoration:none; color:green;" data-bs-toggle="tooltip" title="Klik untuk Download Data"></i></a>
-                                            <a href="<?= base_url('arsip/baca/') ?><?= $row->id_arsip; ?>" target="_blank"><i class="fas fa-book-open" style="text-decoration:none; color:orange;" data-bs-toggle="tooltip" title="Klik untuk Baca Data"></i> </a>
+                                            <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/edit/' . $row['id_arsip']) : '#' ?>"><i class=" fas fa-fw fa-edit" data-bs-toggle="tooltip" title="Klik untuk Edit Data"></i></a>
+                                            <a href="<?= $this->session->userdata('level') == 'Admin' ? base_url('arsip/hapus/' . $row['id_arsip']) : '#' ?>" class="tombolHapus"><i class="fas fa-fw fa-trash" style="color: red;" data-bs-toggle="tooltip" title="Klik untuk Hapus Data"></i></a>
+                                            <a href="<?= base_url('arsip/detail/') ?><?= $row['id_arsip']; ?>"><i class="fas fa-fw fa-circle-info" style="color: black;" data-bs-toggle="tooltip" title="Klik untuk lihat Detail Data"></i></a>
+                                            <a href="<?= base_url('arsip/download/') ?><?= $row['id_arsip']; ?>"> <i class="fas fa-download" style="text-decoration:none; color:green;" data-bs-toggle="tooltip" title="Klik untuk Download Data"></i></a>
+                                            <a href="<?= base_url('arsip/baca/') ?><?= $row['id_arsip']; ?>" target="_blank"><i class="fas fa-book-open" style="text-decoration:none; color:orange;" data-bs-toggle="tooltip" title="Klik untuk Baca Data"></i> </a>
                                         </td>
-                                        <td><?= $row->jenis ?></td>
-                                        <td><?= $row->nama_dokumen ?></td>
-                                        <td><?= $row->tentang ?></td>
-                                        <td class="text-center"><?= $row->tahun ?></td>
-                                        <!-- <td><?= $row->tgl_dokumen ?></td>
-                                        <td><?= $row->tgl_upload ?></td> -->
+                                        <td><?= $row['jenis'] ?></td>
+                                        <td><?= $row['nama_dokumen'] ?></td>
+                                        <td><?= $row['tentang'] ?></td>
+                                        <td class="text-center"><?= $row['tahun'] ?></td>
+                                        <!-- <td><?= $row['tgl_dokumen'] ?></td>
+                                        <td><?= $row['tgl_upload'] ?></td> -->
                                         <!-- <td class="text-center">
-                                            <a href="<?= base_url('arsip/download/') ?><?= $row->id_arsip; ?>"> <i class="fas fa-download" style="text-decoration:none; color:green;"></i></a>
-                                            <a href="<?= base_url('arsip/baca/') ?><?= $row->id_arsip; ?>" target="_blank"><i class="fas fa-book-open" style="text-decoration:none; color:orange;"></i> </a>
+                                            <a href="<?= base_url('arsip/download/') ?><?= $row['id_arsip']; ?>"> <i class="fas fa-download" style="text-decoration:none; color:green;"></i></a>
+                                            <a href="<?= base_url('arsip/baca/') ?><?= $row['id_arsip']; ?>" target="_blank"><i class="fas fa-book-open" style="text-decoration:none; color:orange;"></i> </a>
                                         </td> -->
                                     </tr>
                                 <?php endforeach; ?>
@@ -169,7 +169,7 @@
                         <div class="row justify-content-center">
                             <?php foreach ($daftarEska as $row) : ?>
                                 <div class="col-xl-<?= $bootstrapColWidth; ?> mb-1">
-                                    <h6 style="font-size: 0.7rem;"><?= $row->nama_dokumen ?></h6>
+                                    <h6 style="font-size: 0.7rem;"><?= $row['nama_dokumen'] ?></h6>
                                 </div>
                             <?php
                                 $rowCount++;
@@ -197,7 +197,7 @@
                         <div class="row justify-content-center">
                             <?php foreach ($daftarPer as $row) : ?>
                                 <div class="col-xl-<?= $bootstrapColWidth; ?> mb-1">
-                                    <h6 style="font-size: 0.7rem;"><?= $row->nama_dokumen ?></h6>
+                                    <h6 style="font-size: 0.7rem;"><?= $row['nama_dokumen'] ?></h6>
                                 </div>
                             <?php
                                 $rowCount++;
@@ -225,7 +225,7 @@
                         <div class="row justify-content-center">
                             <?php foreach ($daftarBer as $row) : ?>
                                 <div class="col-xl-<?= $bootstrapColWidth; ?> mb-1">
-                                    <h6 style="font-size: 0.7rem;"><?= $row->nama_dokumen ?></h6>
+                                    <h6 style="font-size: 0.7rem;"><?= $row['nama_dokumen'] ?></h6>
                                 </div>
                             <?php
                                 $rowCount++;
@@ -253,7 +253,7 @@
                         <div class="row justify-content-center">
                             <?php foreach ($daftarDok as $row) : ?>
                                 <div class="col-xl-<?= $bootstrapColWidth; ?> mb-1">
-                                    <h6 style="font-size: 0.7rem;"><?= $row->nama_dokumen ?></h6>
+                                    <h6 style="font-size: 0.7rem;"><?= $row['nama_dokumen'] ?></h6>
                                 </div>
                             <?php
                                 $rowCount++;

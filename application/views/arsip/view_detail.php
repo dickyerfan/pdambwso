@@ -16,37 +16,37 @@
                                         <tr>
                                             <td>Jenis Arsip</td>
                                             <td> : </td>
-                                            <td class="fw-bold text-primary text-uppercase"><?= $detail_arsip->jenis; ?></td>
+                                            <td class="fw-bold text-primary text-uppercase"><?= $detail_arsip['jenis']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Tahun</td>
                                             <td> : </td>
-                                            <td class="fw-bold"><?= $detail_arsip->tahun; ?></td>
+                                            <td class="fw-bold"><?= $detail_arsip['tahun']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Nama Arsip</td>
                                             <td> : </td>
-                                            <td class="fw-bold"><?= $detail_arsip->nama_dokumen; ?></td>
+                                            <td class="fw-bold"><?= $detail_arsip['nama_dokumen']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Tentang</td>
                                             <td> : </td>
-                                            <td class="fw-bold"><?= $detail_arsip->tentang; ?></td>
+                                            <td class="fw-bold"><?= $detail_arsip['tentang']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Tanggal Dokumen</td>
                                             <td> : </td>
-                                            <td class="fw-bold"><?= $detail_arsip->tgl_dokumen; ?></td>
+                                            <td class="fw-bold"><?= $detail_arsip['tgl_dokumen']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Tanggal Upload </td>
                                             <td> : </td>
-                                            <td class="fw-bold"><?= $detail_arsip->tgl_upload; ?></td>
+                                            <td class="fw-bold"><?= $detail_arsip['tgl_upload']; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Keterangan</td>
                                             <td> : </td>
-                                            <td class="fw-bold"><?= $detail_arsip->keterangan; ?></td>
+                                            <td class="fw-bold"><?= $detail_arsip['keterangan']; ?></td>
                                         </tr>
                                     </tbody>
                                 </table>
