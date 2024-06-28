@@ -21,54 +21,54 @@
                                             <tr>
                                                 <td>Nama Lengkap</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->nama ?></td>
+                                                <td class="fw-bold"><?= $karyawan['nama']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Nik</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->nik ?></td>
+                                                <td class="fw-bold"><?= $karyawan['nik']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Bagian / UPK</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->nama_bagian ?></td>
+                                                <td class="fw-bold"><?= $karyawan['nama_bagian']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Jabatan</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->nama_jabatan ?><?= ' ' ?><?= $karyawan->nama_subag ?></td>
+                                                <td class="fw-bold"><?= $karyawan['nama_jabatan']; ?><?= ' ' ?><?= $karyawan['nama_subag']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Status</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->status_pegawai ?></td>
+                                                <td class="fw-bold"><?= $karyawan['status_pegawai']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Alamat</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->alamat ?></td>
+                                                <td class="fw-bold"><?= $karyawan['alamat']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Agama</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->agama ?></td>
+                                                <td class="fw-bold"><?= $karyawan['agama']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>No HP</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->no_hp ?></td>
+                                                <td class="fw-bold"><?= $karyawan['no_hp']; ?></td>
                                             </tr>
 
                                         </tbody>
                                     </table>
                                 </div>
                                 <?php
-                                $tgl_lahir = new DateTime($karyawan->tgl_lahir);
+                                $tgl_lahir = new DateTime($karyawan['tgl_lahir']);
                                 $tgl_skrng = new DateTime();
                                 $umur = $tgl_skrng->diff($tgl_lahir)->y;
 
-                                $tanggalMasuk = ubahNamaBulan($karyawan->tgl_masuk);
-                                $tanggalLahir = ubahNamaBulan($karyawan->tgl_lahir);
+                                $tanggalMasuk = ubahNamaBulan($karyawan['tgl_masuk']);
+                                $tanggalLahir = ubahNamaBulan($karyawan['tgl_lahir']);
                                 ?>
                                 <div class="col-md-6">
                                     <table class="table">
@@ -77,12 +77,12 @@
                                             <tr>
                                                 <td>Jenis Kelamin</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->jenkel ?></td>
+                                                <td class="fw-bold"><?= $karyawan['jenkel']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Tempat lahir</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->tmp_lahir ?></td>
+                                                <td class="fw-bold"><?= $karyawan['tmp_lahir']; ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Tanggal Lahir</td>
@@ -92,13 +92,13 @@
                                             <tr>
                                                 <td>Tanggal Masuk</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->tgl_masuk == '0000-00-00' ? '-' : $tanggalMasuk  ?></td>
+                                                <td class="fw-bold"><?= $karyawan['tgl_masuk'] == '0000-00-00' ? '-' : $tanggalMasuk  ?></td>
                                             </tr>
                                             <tr>
                                                 <td>Masa Kerja</td>
                                                 <td> : </td>
                                                 <?php
-                                                $waktuMasuk = $karyawan->tgl_masuk;
+                                                $waktuMasuk = $karyawan['tgl_masuk'];
                                                 $waktuSkrng = date('Y-m-d');
                                                 $date1 = new DateTime($waktuMasuk);
                                                 $date2 = new DateTime($waktuSkrng);
@@ -110,7 +110,7 @@
                                                 <td>Tanggal Purna</td>
                                                 <td> : </td>
                                                 <?php
-                                                $waktuLahir = $karyawan->tgl_lahir;
+                                                $waktuLahir = $karyawan['tgl_lahir'];
                                                 $waktuKerja = '+56 years';
                                                 $waktuPurna = DateTime::createFromFormat('Y-m-d', $waktuLahir);
                                                 $waktuPurna->modify($waktuKerja);
@@ -146,7 +146,7 @@
                                             <tr>
                                                 <td>Status Aktif</td>
                                                 <td> : </td>
-                                                <td class="fw-bold"><?= $karyawan->aktif == 1 ? 'Karyawan Aktif' : 'Karyawan Purna' ?></td>
+                                                <td class="fw-bold"><?= $karyawan['aktif'] == 1 ? 'Karyawan Aktif' : 'Karyawan Purna' ?></td>
                                             </tr>
                                         </tbody>
                                     </table>

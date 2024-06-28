@@ -16,7 +16,14 @@ class Karyawan_kontrak extends CI_Controller
     public function index()
     {
         $data['title'] = 'Daftar Karyawan Kontrak';
-        $data['karyawanTetap'] = $this->model_karyawan->getKaryawanKontrak();
+        // $data['karyawanTetap'] = $this->model_karyawan->getKaryawanKontrak();
+        $apiUrl = 'http://103.160.148.174/Api_pegawai';
+
+        $output = file_get_contents($apiUrl);
+        $response = json_decode($output, true);
+
+        $data['karyawanKontrak'] = $response['karyawanKontrak'];
+
         if ($this->session->userdata('level') == 'Admin') {
             $this->load->view('templates/header', $data);
             $this->load->view('templates/navbar');

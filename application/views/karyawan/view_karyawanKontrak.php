@@ -29,18 +29,18 @@
                             <tbody>
                                 <?php
                                 $no = 1;
-                                foreach ($karyawanTetap as $row) :
+                                foreach ($karyawanKontrak as $row) :
                                 ?>
                                     <tr>
                                         <td class="text-center"><small><?= $no++ ?></small></td>
-                                        <td><?= $row->nama ?></td>
-                                        <td><?= $row->nik ?></td>
-                                        <td><?= $row->alamat ?></td>
-                                        <td><?= $row->agama ?></td>
-                                        <td><?= $row->no_hp ?></td>
-                                        <td><?= $row->jenkel ?></td>
-                                        <td><?= $row->tmp_lahir ?></td>
-                                        <td><?= $row->tgl_lahir ?></td>
+                                        <td><?= $row['nama']; ?></td>
+                                        <td><?= $row['nik']; ?></td>
+                                        <td><?= $row['alamat']; ?></td>
+                                        <td><?= $row['agama']; ?></td>
+                                        <td><?= $row['no_hp']; ?></td>
+                                        <td><?= $row['jenkel']; ?></td>
+                                        <td><?= $row['tmp_lahir']; ?></td>
+                                        <td><?= $row['tgl_lahir']; ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
